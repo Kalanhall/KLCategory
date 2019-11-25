@@ -1,0 +1,22 @@
+{
+  "name": "KLCategory",
+  "version": "0.1.0",
+  "summary": "A short description of KLCategory.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Kalanhall@163.com/KLCategory",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kalanhall@163.com": "wujm002@galanz.com"
+  },
+  "source": {
+    "git": "https://github.com/Kalanhall@163.com/KLCategory.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KLCategory/Classes/**/*"
+}
