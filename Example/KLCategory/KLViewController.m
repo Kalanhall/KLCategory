@@ -7,6 +7,7 @@
 //
 
 #import "KLViewController.h"
+@import KLCategory;
 
 @interface KLViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSLog(@"origin:%f Top:%f Bottom:%f", Auto(30), Auto_Top(), Auto_Bottom());
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,5 +1,5 @@
 PODS:
-  - KLCategory (1.0.1)
+  - KLCategory (1.0.2)
 
 DEPENDENCIES:
   - KLCategory (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCategory: aea0a8d172b119bb40d8379b468f52e840fbe22c
+  KLCategory: 454797e7295c58d0c8316251eebf396420ddd49a
 
-PODFILE CHECKSUM: d0a463ed1b68f3ee3893c8c909d59e91df3024d6
+PODFILE CHECKSUM: 9c655acf6a6bd80172953096cb7e592b2e22963c
 
 COCOAPODS: 1.8.3
