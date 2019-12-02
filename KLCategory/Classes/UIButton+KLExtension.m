@@ -1,13 +1,13 @@
 //
-//  UIButton+Extension.m
+//  UIButton+KLExtension.m
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
 //
 
-#import "UIButton+Extension.h"
+#import "UIButton+KLExtension.h"
 
-@implementation UIButton (Extension)
+@implementation UIButton (KLExtension)
 
 - (void)kl_layoutWithStatus:(KLLayoutStatus)status margin:(CGFloat)margin {
     CGFloat imgWidth = self.imageView.bounds.size.width;

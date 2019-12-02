@@ -1,5 +1,5 @@
 //
-//  UIColor+Extension.h
+//  UIColor+KLExtension.h
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (Extension)
+@interface UIColor (KLExtension)
 
 /** @brief 随机染色 */
 + (UIColor *)kl_randomColor;

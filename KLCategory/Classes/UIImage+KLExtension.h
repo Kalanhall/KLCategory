@@ -1,5 +1,5 @@
 //
-//  UIImage+Extension.h
+//  UIImage+KLExtension.h
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (Extension)
+@interface UIImage (KLExtension)
 
 /**
  * @brief 生成一张1x1的矩形图片

@@ -1,13 +1,13 @@
 //
-//  NSObject+Extension.m
+//  NSObject+KLExtension.m
 //  KLCategory
 //
 //  Created by Logic on 2019/11/30.
 //
 
-#import "NSObject+Extension.h"
+#import "NSObject+KLExtension.h"
 
-@implementation NSObject (Extension)
+@implementation NSObject (KLExtension)
 
 CGFloat ScreenWidth(void) {
     return UIScreen.mainScreen.bounds.size.width;

@@ -1,14 +1,14 @@
 //
-//  UIViewController+LogExtension.m
-//  Extensions
+//  UIViewController+LogKLExtension.m
+//  KLExtensions
 //
 //  Created by Logic on 2019/11/20.
 //
 
-#import "UIViewController+LogExtension.h"
+#import "UIViewController+KLLogExtension.h"
 #import <objc/runtime.h>
 
-@implementation UIViewController (LogExtension)
+@implementation UIViewController (KLLogKLExtension)
 
 #ifdef DEBUG
 + (void)load {

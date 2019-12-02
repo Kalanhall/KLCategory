@@ -1,13 +1,13 @@
 //
-//  UIColor+Extension.m
+//  UIColor+KLExtension.m
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
 //
 
-#import "UIColor+Extension.h"
+#import "UIColor+KLExtension.h"
 
-@implementation UIColor (Extension)
+@implementation UIColor (KLExtension)
 
 + (UIColor *)kl_colorWithHexString:(NSString *)hexString {
     return [self kl_colorWithHexString:hexString alpha:1];

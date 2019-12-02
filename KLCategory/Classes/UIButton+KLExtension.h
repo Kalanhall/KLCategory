@@ -1,5 +1,5 @@
 //
-//  UIButton+Extension.h
+//  UIButton+KLExtension.h
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, KLLayoutStatus){
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIButton (Extension)
+@interface UIButton (KLExtension)
 
 /**
  * @brief 设置按钮内部图片及标题位置

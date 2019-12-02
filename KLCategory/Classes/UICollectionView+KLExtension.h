@@ -23,7 +23,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UICollectionView (Extension)
+@interface UICollectionView (KLExtension)
 
 /**
  *  caculate cell size

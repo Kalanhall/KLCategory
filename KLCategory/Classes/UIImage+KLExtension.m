@@ -1,13 +1,13 @@
 //
-//  UIImage+Extension.m
+//  UIImage+KLExtension.m
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
 //
 
-#import "UIImage+Extension.h"
+#import "UIImage+KLExtension.h"
 
-@implementation UIImage (Extension)
+@implementation UIImage (KLExtension)
 
 + (UIImage *)kl_imageWithColor:(UIColor *)color {
     return [self kl_imageWithColor:color size:CGSizeMake(1, 1)];
