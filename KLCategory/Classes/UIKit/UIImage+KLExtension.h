@@ -45,6 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)kl_imageWithImageName:(NSString *)imageName inBundle:(NSBundle *)bundle;
 
+/**
+ * @brief 获取第三方库中Bundle的图片
+ * @param imageName  图片名
+ * @param classOfBundle 指定Bundle中的类
+ */
++ (instancetype)kl_imageWithImageName:(NSString *)imageName inBundleOfClass:(Class)classOfBundle;
+
 @end
 
 NS_ASSUME_NONNULL_END

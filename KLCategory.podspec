@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KLCategory'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = '分类组件'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   
-  s.source_files = 'KLCategory/Classes/**/*'
+  s.source_files = 'KLCategory/Classes/*/**'
+  
   
   # s.resource_bundles = {
   #   'KLCategory' => ['KLCategory/Assets/*.png']

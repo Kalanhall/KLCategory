@@ -21,7 +21,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    NSLog(@"origin:%f Top:%f Bottom:%f", Auto(30), Auto_Top(), Auto_Bottom());
+    NSLog(@"origin:%f Top:%f Bottom:%f Size:%f, %f", Auto(30), Auto_Top(), Auto_Bottom(), self.view.kl_width, self.view.kl_height);
+    NSLog(@"%@", UIDevice.identifierByKeychain);
 }
 
 - (void)didReceiveMemoryWarning

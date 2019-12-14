@@ -12,11 +12,12 @@
 
 #import "NSObject+KLExtension.h"
 #import "NSObject+KLTouchFaceID.h"
-#import "UIButton+KLExtension.h"
-#import "UICollectionView+KLExtension.h"
+#import "UIButton+KLLayout.h"
+#import "UICollectionView+KLCellAutoSize.h"
 #import "UIColor+KLExtension.h"
+#import "UIDevice+KLExtension.h"
 #import "UIImage+KLExtension.h"
-#import "UIView+KLExtensiton.h"
+#import "UIView+KLFrame.h"
 #import "UIViewController+KLLogExtension.h"
 
 FOUNDATION_EXPORT double KLCategoryVersionNumber;

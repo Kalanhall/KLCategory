@@ -1,11 +1,11 @@
 //
-//  UIButton+KLExtension.m
+//  UIButton+KLLayout.m
 //  KLCategory
 //
 //  Created by Logic on 2019/11/25.
 //
 
-#import "UIButton+KLExtension.h"
+#import "UIButton+KLLayout.h"
 
 @implementation UIButton (KLExtension)
 
