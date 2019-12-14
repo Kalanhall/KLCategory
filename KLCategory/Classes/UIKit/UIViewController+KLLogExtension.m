@@ -6,6 +6,7 @@
 //
 
 #import "UIViewController+KLLogExtension.h"
+#import "NSLogger.h"
 #import <objc/runtime.h>
 
 @implementation UIViewController (KLLogKLExtension)
@@ -22,12 +23,12 @@
 }
 
 - (void)ex_viewDidLoad {
-    NSLog(@"%@ viewDidLoad", self);
+    NSLogNotice(@"%@ viewDidLoad", self);
     [self ex_viewDidLoad];
 }
 
 - (void)ex_dealloc {
-    NSLog(@"%@ dealloc", self);
+    NSLogNotice(@"%@ dealloc", self);
     [self ex_dealloc];
 }
 

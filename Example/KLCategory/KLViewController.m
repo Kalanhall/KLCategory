@@ -19,10 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    NSLog(@"origin:%f Top:%f Bottom:%f Size:%f, %f", Auto(30), Auto_Top(), Auto_Bottom(), self.view.kl_width, self.view.kl_height);
-    NSLog(@"%@", UIDevice.identifierByKeychain);
+    NSLogDebug(@"origin:%f Top:%f Bottom:%f Size:%f, %f", Auto(30), Auto_Top(), Auto_Bottom(), self.view.kl_width, self.view.kl_height);
+    NSLogDebug(@"%@", UIDevice.identifierByKeychain);
+    NSLogError(@"Hello World!");
 }
 
 - (void)didReceiveMemoryWarning
