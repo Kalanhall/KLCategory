@@ -30,15 +30,15 @@ CGFloat Auto(CGFloat origin) {
     return round((origin * (width / base) * divisor)) / divisor;
 }
 
-CGFloat Auto_Status(void) {
+CGFloat AutoStatus(void) {
     return UIApplication.sharedApplication.statusBarFrame.size.height;
 }
 
-CGFloat Auto_Top(void) {
+CGFloat AutoTop(void) {
     return UIApplication.sharedApplication.statusBarFrame.size.height + 44.0;
 }
 
-CGFloat Auto_BottomInset(void) {
+CGFloat AutoBottomInset(void) {
     CGFloat botomInset = 0;
     if (@available(iOS 11.0, *)) {
         UIWindow *window = UIApplication.sharedApplication.delegate.window;
@@ -47,16 +47,16 @@ CGFloat Auto_BottomInset(void) {
     return botomInset;
 }
 
-CGFloat Auto_Bottom(void) {
-    return Auto_BottomInset() + 49.0;
+CGFloat AutoBottom(void) {
+    return AutoBottomInset() + 49.0;
 }
 
-BOOL isPhone(void) {
+BOOL isphone(void) {
     return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
 }
 
-BOOL isPhoneX(void) {
-    return Auto_BottomInset() > 0;
+BOOL isphoneX(void) {
+    return AutoBottomInset() > 0;
 }
 
 @end

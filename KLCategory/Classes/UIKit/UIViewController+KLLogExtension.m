@@ -14,22 +14,22 @@
 #ifdef DEBUG
 + (void)load {
     Method m1 = class_getInstanceMethod(self, @selector(viewDidLoad));
-    Method m2 = class_getInstanceMethod(self, @selector(ex_viewDidLoad));
+    Method m2 = class_getInstanceMethod(self, @selector(kl_viewDidLoad));
     method_exchangeImplementations(m1, m2);
     
     Method m3 = class_getInstanceMethod(self, NSSelectorFromString(@"dealloc"));
-    Method m4 = class_getInstanceMethod(self, @selector(ex_dealloc));
+    Method m4 = class_getInstanceMethod(self, @selector(kl_dealloc));
     method_exchangeImplementations(m3, m4);
 }
 
-- (void)ex_viewDidLoad {
+- (void)kl_viewDidLoad {
     NSLogNotice(@"%@ viewDidLoad", self);
-    [self ex_viewDidLoad];
+    [self kl_viewDidLoad];
 }
 
-- (void)ex_dealloc {
+- (void)kl_dealloc {
     NSLogNotice(@"%@ dealloc", self);
-    [self ex_dealloc];
+    [self kl_dealloc];
 }
 
 #endif

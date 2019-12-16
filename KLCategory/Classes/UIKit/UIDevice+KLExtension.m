@@ -10,7 +10,7 @@
 
 @implementation UIDevice (KLExtension)
 
-+ (NSString *)identifierByKeychain;
++ (NSString *)kl_identifierByKeychain;
 {
     //该类方法没有线程保护，所以可能因异步而导致创建出不同的设备唯一ID，故而增加此线程锁！
     @synchronized ([NSNotificationCenter defaultCenter])

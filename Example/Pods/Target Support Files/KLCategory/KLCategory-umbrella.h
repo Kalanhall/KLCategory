@@ -14,6 +14,7 @@
 #import "NSLogger.h"
 #import "NSObject+KLExtension.h"
 #import "NSObject+KLTouchFaceID.h"
+#import "NSString+KLValue.h"
 #import "UIButton+KLLayout.h"
 #import "UICollectionView+KLCellAutoSize.h"
 #import "UIColor+KLExtension.h"
