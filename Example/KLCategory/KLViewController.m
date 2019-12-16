@@ -29,6 +29,7 @@
     // NSdate
     NSLogDebug(@"年：%@", @(NSDate.date.year));
     NSLogDebug(@"月：%@", @(NSDate.date.month));
+    NSLogDebug(@"周：%@", @(NSDate.date.week));
     NSLogDebug(@"日：%@", @(NSDate.date.day));
     NSLogDebug(@"时间->字符串：%@", [NSDate.date stringWithFormat:@"yyyy-MM-dd HH:mm:ss"]);
     

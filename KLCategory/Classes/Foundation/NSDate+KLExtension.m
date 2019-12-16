@@ -15,6 +15,15 @@
 - (NSUInteger)month
 { return [NSDate month:self]; }
 
+- (NSUInteger)week
+{ return [NSDate week:self]; }
+
+- (NSUInteger)weekInMonth
+{ return [NSDate weekInMonth:self]; }
+
+- (NSUInteger)weekInYear
+{ return [NSDate weekInYear:self]; }
+
 - (NSUInteger)year
 { return [NSDate year:self]; }
 
@@ -32,6 +41,15 @@
 
 + (NSUInteger)month:(NSDate *)date
 { return [self componentsWithUnit:NSCalendarUnitMonth date:date].month; }
+
++ (NSUInteger)week:(NSDate *)date
+{ return [self componentsWithUnit:NSCalendarUnitWeekday date:date].weekday; }
+
++ (NSUInteger)weekInMonth:(NSDate *)date
+{ return [self componentsWithUnit:NSCalendarUnitWeekOfMonth date:date].weekOfMonth; }
+
++ (NSUInteger)weekInYear:(NSDate *)date
+{ return [self componentsWithUnit:NSCalendarUnitWeekOfYear date:date].weekOfYear; }
 
 + (NSUInteger)day:(NSDate *)date
 { return [self componentsWithUnit:NSCalendarUnitDay date:date].day; }

@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)year;
 /// 月
 - (NSUInteger)month;
+/// 周
+- (NSUInteger)week;
+/// 一月中的第几周
+- (NSUInteger)weekInMonth;
+/// 一年中的第几周
+- (NSUInteger)weekInYear;
 /// 日
 - (NSUInteger)day;
 /// 时
