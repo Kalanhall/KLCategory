@@ -38,9 +38,9 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_WARNING
-#define NSLogWarning(...) NSFormattedLog(LOG_LEVEL_WARNING, @"\t⚠️⚠️⚠️\tWarning", __VA_ARGS__)
+#define NSLogWarn(...) NSFormattedLog(LOG_LEVEL_WARNING, @"\t⚠️⚠️⚠️\tWarning", __VA_ARGS__)
 #else
-#define NSLogWarning(...)
+#define NSLogWarn(...)
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_NOTICE
