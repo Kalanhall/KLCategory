@@ -47,6 +47,14 @@
     NSLogDebug(@"%@", [NSString kl_decimalStringWithValue:123456789.915]);         // 123456789.92
     NSLogDebug(@"%@", @"123456789.915".kl_decimalStyleString);                     // 123,456,789.92
     NSLogDebug(@"%@", [NSString kl_decimalStyleStringWithValue:123456789.915]);    // 123,456,789.92
+    
+    // 字符串操作
+    NSLogDebug(@"%@", [NSString kl_documentPathWithFileName:@"MyFile"]);
+    NSLogDebug(@"%@", @"Hello World".kl_reverseString);
+    NSLogDebug(@"%@", @"你好 世界".kl_chinessToPinyin);
+    NSLogDebug(@"是否是纯数字 %@", @(@"123.21".kl_isNumber));
+    NSLogDebug(@"是否是金额 %@", @(@"123.21".kl_isMoneyNumber));
+    NSLogDebug(@"MD5加密 %@", @"123.21".kl_MD5CapitalString);
 }
 
 - (void)didReceiveMemoryWarning
