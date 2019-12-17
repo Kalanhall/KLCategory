@@ -32,8 +32,9 @@
     // NSLogger
     NSLogDebug(@"origin：%f Top：%f Bottom：%f", Auto(30), AutoTop(), AutoBottom());
     NSLogInfo(@"Keychain：%@", UIDevice.kl_identifierByKeychain);
-    NSLogWarn(@"Hello World!");
-    NSLogError(@"Hello World!");
+    NSLogWarning(@"Warning!");
+    NSLogSuccess(@"Success!");
+    NSLogError(@"Error!");
 }
 
 - (void)testNSDate
