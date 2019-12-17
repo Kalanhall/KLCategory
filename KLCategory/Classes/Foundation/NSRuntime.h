@@ -9,7 +9,6 @@
 #define NSRuntime_h
 
 #import <objc/runtime.h>
-#import "NSLogger.h"
 
 /**
 *  如果 fromClass 里存在 originSelector，则这个函数会将 fromClass 里的 originSelector 与 toClass 里的 newSelector 交换实现。
