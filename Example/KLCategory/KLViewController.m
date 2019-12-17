@@ -11,6 +11,9 @@
 
 @interface KLViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *statusBtn;
+
+
 @end
 
 @implementation KLViewController
@@ -21,6 +24,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // see Tests.m
+    
+    // UI Test
+//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusNormal) margin:5];
+    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageTop) margin:5];
+//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageBottom) margin:5];
+//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageRight) margin:5];
 }
 
 - (void)didReceiveMemoryWarning
