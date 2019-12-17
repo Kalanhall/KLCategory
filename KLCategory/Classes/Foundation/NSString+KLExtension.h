@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)kl_isChinese;
 /// 是否纯数字
 - (BOOL)kl_isNumber;
-/// 是否是金额
+/// 是否是金额，最多2位小数
 - (BOOL)kl_isMoneyNumber;
 /// 邮政编码
 - (BOOL)kl_isPostalcode;
@@ -56,10 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 沙盒 - Temp
 + (instancetype)kl_temptPathWithFileName:(NSString *)fileName;
 
-/// MARK: - 加密相关
-/// MD5加密
-- (NSString *)kl_MD5String;
-- (NSString *)kl_MD5CapitalString;
+/// MARK: - 过滤相关
 /// 特殊字符过虑
 - (NSString *)kl_stringWithURLEncoding;
 /// 特殊字符过虑

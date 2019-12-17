@@ -53,8 +53,12 @@
     NSLogDebug(@"%@", @"Hello World".kl_reverseString);
     NSLogDebug(@"%@", @"你好 世界".kl_chinessToPinyin);
     NSLogDebug(@"是否是纯数字 %@", @(@"123.21".kl_isNumber));
-    NSLogDebug(@"是否是金额 %@", @(@"123.21".kl_isMoneyNumber));
-    NSLogDebug(@"MD5加密 %@", @"123.21".kl_MD5CapitalString);
+    NSLogDebug(@"是否是金额 %@", @(@"1.0".kl_isMoneyNumber));
+    
+    // 系统方法
+    NSLogDebug(@"大小写转换 %@", @"85sfds5x5d6eg".uppercaseString);
+    NSLogDebug(@"大小写转换 %@", @"85SFDS5X5D6EG".lowercaseString);
+    
 }
 
 - (void)didReceiveMemoryWarning

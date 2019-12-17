@@ -64,7 +64,7 @@
 
 - (BOOL)kl_isMoneyNumber
 {
-    NSString *regex = @"^([1-9]\\d*|0)(\\.\\d?[1-9])?$";
+    NSString *regex = @"^([1-9]\\d*|0)(\\.[0-9]{1,2})?$";
     return [self kl_isateByRegex:regex];;
 }
 
@@ -338,32 +338,6 @@
 {
     NSString *result = [self stringByRemovingPercentEncoding];
     return result?result:self;
-}
-
-- (NSString *)kl_MD5String
-{
-    NSData *dataString = [self dataUsingEncoding:NSUTF8StringEncoding];
-    unsigned char digestArray[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([dataString bytes], (CC_LONG)[dataString length], digestArray);
-
-    NSMutableString *md5String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [md5String appendFormat:@"%02x", digestArray[i]];
-    }
-    return md5String;
-}
-
-- (NSString *)kl_MD5CapitalString
-{
-    NSData *dataString = [self dataUsingEncoding:NSUTF8StringEncoding];
-    unsigned char digestArray[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([dataString bytes], (CC_LONG)[dataString length], digestArray);
-
-    NSMutableString *md5String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [md5String appendFormat:@"%02X", digestArray[i]];
-    }
-    return md5String;
 }
 
 @end

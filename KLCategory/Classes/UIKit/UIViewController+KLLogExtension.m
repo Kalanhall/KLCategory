@@ -7,19 +7,13 @@
 
 #import "UIViewController+KLLogExtension.h"
 #import "NSLogger.h"
-#import <objc/runtime.h>
+#import "NSRuntime.h"
 
 @implementation UIViewController (KLLogKLExtension)
 
 #ifdef DEBUG
 + (void)load {
-    Method m1 = class_getInstanceMethod(self, @selector(viewDidLoad));
-    Method m2 = class_getInstanceMethod(self, @selector(kl_viewDidLoad));
-    method_exchangeImplementations(m1, m2);
-    
-    Method m3 = class_getInstanceMethod(self, NSSelectorFromString(@"dealloc"));
-    Method m4 = class_getInstanceMethod(self, @selector(kl_dealloc));
-    method_exchangeImplementations(m3, m4);
+    KLExchangeImplementations(self, @selector(viewDidLoad), self, @selector(kl_viewDidLoad));
 }
 
 - (void)kl_viewDidLoad {
