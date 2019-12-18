@@ -63,13 +63,13 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_DEBUG
-#define NSLogDebug(...) NSFormattedLog(LOG_LEVEL_DEBUG, @"\t🐞🐞🐞\t", __VA_ARGS__)
+#define NSLogDebug(...) NSFormattedLog(LOG_LEVEL_DEBUG, @"\t🐝🐝🐝\t", __VA_ARGS__)
 #else
 #define NSLogDebug(...)
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_VERBOSE
-#define NSLogVerbose(...) NSFormattedLog(LOG_LEVEL_VERBOSE, @"\t🔆🔆🔆\t", __VA_ARGS__)
+#define NSLogVerbose(...) NSFormattedLog(LOG_LEVEL_VERBOSE, @"\t🐠🐠🐠\t", __VA_ARGS__)
 #else
 #define NSLogVerbose(...)
 #endif
@@ -77,12 +77,12 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 #if NSLogThreshold <= LOG_LEVEL_ALERT
 #define NSLogAlert(...) \
 ^(){\
-    NSFormattedLog(LOG_LEVEL_ALERT, @"\t🌀🌀🌀\t", __VA_ARGS__);\
-    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"Something To Do" message:[NSString stringWithFormat:__VA_ARGS__] preferredStyle:UIAlertControllerStyleAlert];\
+    NSFormattedLog(LOG_LEVEL_ALERT, @"\t🐳🐳🐳\t", __VA_ARGS__);\
+    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"🐳🐳🐳\n" message:[NSString stringWithFormat:__VA_ARGS__] preferredStyle:UIAlertControllerStyleAlert];\
     UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleDestructive handler:nil];\
     [vc addAction:cancle];\
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{\
-        [self presentViewController:vc animated:YES completion:nil];\
+        [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];\
     });\
 }()
 #else

@@ -5,11 +5,11 @@
 //  Created by Logic on 2019/11/25.
 //
 
-#import "UIButton+KLLayout.h"
+#import "UIButton+KLExtension.h"
 
 @implementation UIButton (KLExtension)
 
-- (void)kl_layoutWithStatus:(KLLayoutStatus)status margin:(CGFloat)margin {
+- (void)kl_layoutWithStyle:(KLLayoutStyle)Style margin:(CGFloat)margin {
     
     [self.superview layoutIfNeeded];
     NSAssert(self.superview != nil, @"请先将按钮添加到父视图");
@@ -25,21 +25,21 @@
         labWidth = frameSize.width;
     }
     CGFloat kMargin = margin * 0.5;
-    switch (status) {
-        case KLLayoutStatusNormal:      // 图左字右
+    switch (Style) {
+        case KLLayoutStyleImageLeft:      // 图左字右
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, -kMargin, 0, kMargin)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, kMargin, 0, -kMargin)];
             break;
-        case KLLayoutStatusImageRight:  // 图右字左
+        case KLLayoutStyleImageRight:  // 图右字左
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, labWidth + kMargin, 0, -labWidth - kMargin)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imgWidth - kMargin, 0, imgWidth + kMargin)];
             break;
-        case KLLayoutStatusImageTop:    // 图上字下
+        case KLLayoutStyleImageTop:    // 图上字下
             [self setImageEdgeInsets:UIEdgeInsetsMake(0,0, labHeight + margin, -labWidth)];
             
             [self setTitleEdgeInsets:UIEdgeInsetsMake(imgHeight + margin, -imgWidth, 0, 0)];
             break;
-        case KLLayoutStatusImageBottom: // 图下字上
+        case KLLayoutStyleImageBottom: // 图下字上
             [self setImageEdgeInsets:UIEdgeInsetsMake(labHeight + margin,0, 0, -labWidth)];
             
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imgWidth, imgHeight + margin, 0)];

@@ -5,27 +5,27 @@
 //  Created by Logic on 2019/11/25.
 //
 
-typedef NS_ENUM(NSUInteger, KLLayoutStatus){
+typedef NS_ENUM(NSUInteger, KLLayoutStyle){
     /** 正常位置，图左字右 */
-    KLLayoutStatusNormal,
+    KLLayoutStyleImageLeft,
     /** 图右字左 */
-    KLLayoutStatusImageRight,
+    KLLayoutStyleImageRight,
     /** 图上字下 */
-    KLLayoutStatusImageTop,
+    KLLayoutStyleImageTop,
     /** 图下字上 */
-    KLLayoutStatusImageBottom,
+    KLLayoutStyleImageBottom,
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIButton (KLLayout)
+@interface UIButton (KLExtension)
 
 /**
  * @brief 设置按钮内部图片及标题位置
- * @param status 方向枚举
+ * @param Style 方向枚举
  * @param margin 图片和标题之间的间距
  */
-- (void)kl_layoutWithStatus:(KLLayoutStatus)status margin:(CGFloat)margin;
+- (void)kl_layoutWithStyle:(KLLayoutStyle)Style margin:(CGFloat)margin;
 
 @end
 
