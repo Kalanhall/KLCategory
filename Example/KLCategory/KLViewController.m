@@ -62,20 +62,19 @@
     [lb kl_setRowspace:1];
     
     // 添加点击事件
-    __weak typeof(self) ws = self;
     [self.view kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
 //        NSLogAlert(@"Hello World");
-        [ws.navigationController pushViewController:KLViewController.new animated:YES];
+        [KLCurrentController() presentViewController:KLViewController.new animated:YES completion:nil];
     }];
     
     [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
         NSLogAlert(@"Hello World");
     }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLogInfos(@"%@", KLCurrentController());
-    });
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
