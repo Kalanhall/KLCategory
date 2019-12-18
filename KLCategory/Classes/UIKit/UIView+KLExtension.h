@@ -55,7 +55,17 @@
 @property (assign, nonatomic) IBInspectable BOOL kl_shouldAnimateBadge;
 
 // MARK: - 快捷事件注册
+/// 添加手势
 - (void)kl_setTapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion;
+/// 添加长按手势
 - (void)kl_setLongPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion;
+
+// MARK: - 快捷遍历
+/// 当前视图所在控制器
+- (UIViewController *)kl_controller;
+/// 获取本视图中指定类子视图
+- (instancetype)kl_subviewOfClass:(Class)cls;
+/// 获取本视图中指定类子视图集合
+- (NSArray <UIView *> *)kl_subviewsOfClass:(Class)cls;
 
 @end

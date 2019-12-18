@@ -430,4 +430,36 @@
     }
 }
 
+// MARK: - 快捷遍历
+- (UIViewController *)kl_controller
+{
+    UIResponder *responder = self.nextResponder;
+    do {
+        if ([responder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)responder;
+        }
+        responder = responder.nextResponder;
+    }
+    while (responder);
+    return nil;
+}
+
+- (UIView *)kl_subviewOfClass:(Class)cls
+{
+    for (UIView * subView in self.subviews) {
+        if ([subView isKindOfClass:cls]) return subView;
+    }
+    return nil;
+}
+
+- (NSArray <UIView *> *)kl_subviewsOfClass:(Class)cls {
+    NSMutableArray *array = [NSMutableArray array];
+    for (UIView * subView in self.subviews) {
+        if ([subView isKindOfClass:cls]) {
+            [array addObject:subView];
+        }
+    }
+    return array;
+}
+
 @end

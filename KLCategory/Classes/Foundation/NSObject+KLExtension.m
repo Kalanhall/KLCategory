@@ -9,36 +9,36 @@
 
 @implementation NSObject (KLExtension)
 
-CGFloat ScreenWidth(void) {
+CGFloat KLScreenWidth(void) {
     return UIScreen.mainScreen.bounds.size.width;
 }
 
-CGFloat ScreenHeight(void) {
+CGFloat KLScreenHeight(void) {
     return UIScreen.mainScreen.bounds.size.height;
 }
 
-CGFloat Auto(CGFloat origin) {
+CGFloat KLAuto(CGFloat origin) {
     
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
         return origin;
     }
     
     CGFloat base = 375.0;
-    CGFloat width = MIN(ScreenWidth(), ScreenHeight());
+    CGFloat width = MIN(KLScreenWidth(), KLScreenHeight());
     
     CGFloat divisor = pow(10.0, MAX(0, 3));
     return round((origin * (width / base) * divisor)) / divisor;
 }
 
-CGFloat AutoStatus(void) {
+CGFloat KLAutoStatus(void) {
     return UIApplication.sharedApplication.statusBarFrame.size.height;
 }
 
-CGFloat AutoTop(void) {
+CGFloat KLAutoTop(void) {
     return UIApplication.sharedApplication.statusBarFrame.size.height + 44.0;
 }
 
-CGFloat AutoBottomInset(void) {
+CGFloat KLAutoBottomInset(void) {
     CGFloat botomInset = 0;
     if (@available(iOS 11.0, *)) {
         UIWindow *window = UIApplication.sharedApplication.delegate.window;
@@ -47,16 +47,54 @@ CGFloat AutoBottomInset(void) {
     return botomInset;
 }
 
-CGFloat AutoBottom(void) {
-    return AutoBottomInset() + 49.0;
+CGFloat KLAutoBottom(void) {
+    return KLAutoBottomInset() + 49.0;
 }
 
-BOOL isphone(void) {
+BOOL KLIsphone(void) {
     return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
 }
 
-BOOL isphoneX(void) {
-    return AutoBottomInset() > 0;
+BOOL KLIsphoneXabove(void) {
+    return KLAutoBottomInset() > 0;
+}
+
+UIViewController *KLCurrentController(void)
+{
+     for (UIWindow *window in [UIApplication sharedApplication].windows.reverseObjectEnumerator) {
+        UIView *tempView = window.subviews.lastObject;
+        for (UIView *subview in window.subviews.reverseObjectEnumerator) {
+            if ([subview isKindOfClass:NSClassFromString(@"UILayoutContainerView")]) {
+                tempView = subview;
+                break;
+            }
+        }
+        BOOL(^canNext)(UIResponder *) = ^(UIResponder *responder){
+            if (![responder isKindOfClass:[UIViewController class]]) {
+                return YES;
+            } else if ([responder isKindOfClass:[UINavigationController class]]) {
+                return YES;
+            } else if ([responder isKindOfClass:[UITabBarController class]]) {
+                return YES;
+            } else if ([responder isKindOfClass:NSClassFromString(@"UIInputWindowController")]) {
+                return YES;
+            }
+            return NO;
+        };
+        UIResponder *nextResponder = tempView.nextResponder;
+        while (canNext(nextResponder)) {
+            tempView = tempView.subviews.firstObject;
+            if (!tempView) {
+                return nil;
+            }
+            nextResponder = tempView.nextResponder;
+        }
+        UIViewController *currentVC = (UIViewController *)nextResponder;
+        if (currentVC) {
+            return currentVC;
+        }
+    }
+    return nil;
 }
 
 @end
