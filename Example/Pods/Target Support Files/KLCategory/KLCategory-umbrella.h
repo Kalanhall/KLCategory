@@ -23,6 +23,7 @@
 #import "UIColor+KLExtension.h"
 #import "UIDevice+KLExtension.h"
 #import "UIImage+KLExtension.h"
+#import "UILabel+KLExtension.h"
 #import "UIView+KLExtension.h"
 #import "UIViewController+KLLogExtension.h"
 

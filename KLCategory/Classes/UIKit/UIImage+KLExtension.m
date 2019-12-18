@@ -57,4 +57,53 @@
     return [self kl_imageWithImageName:imageName inBundle:[NSBundle bundleForClass:classOfBundle]];
 }
 
+- (instancetype)kl_imageWithCornerRadius:(CGFloat)radius
+{
+    return [self kl_imageWithCornerRadius:radius andSize:self.size];
+}
+
+- (instancetype)kl_imageWithCornerRadius:(CGFloat)radius andSize:(CGSize)size
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
+    CGContextAddPath(ctx,path.CGPath);
+    CGContextClip(ctx);
+    [self drawInRect:rect];
+    CGContextDrawPath(ctx, kCGPathFillStroke);
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+- (instancetype)kl_compressWithMaxByte:(NSInteger)maxBtye
+{
+    CGFloat compress = 0.9f;
+    NSData *data = UIImageJPEGRepresentation(self, compress);
+    while (data.length > maxBtye && compress > 0.01) {
+        compress -= 0.02f;
+        data = UIImageJPEGRepresentation(self, compress);
+    }
+    return [UIImage imageWithData:data];
+}
+
+- (instancetype)kl_convertToGrayImage
+{
+    int width = self.size.width;
+    int height = self.size.height;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
+    CGContextRef context = CGBitmapContextCreate(nil,width,height,8,0,colorSpace,kCGImageAlphaNone);
+    CGColorSpaceRelease(colorSpace);
+    if (context == NULL) {
+        return nil;
+    }
+    CGContextDrawImage(context,CGRectMake(0, 0, width, height), self.CGImage);
+    CGImageRef contextRef = CGBitmapContextCreateImage(context);
+    UIImage *grayImage = [UIImage imageWithCGImage:contextRef];
+    CGContextRelease(context);
+    CGImageRelease(contextRef);
+    return grayImage;
+}
+
 @end

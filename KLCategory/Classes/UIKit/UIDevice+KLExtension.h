@@ -11,7 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIDevice (KLExtension)
 
+/// 虚拟唯一标识符
 + (NSString *)kl_identifierByKeychain;
+/// MAC地址
++ (NSString *)kl_macAddress;
 
 @end
 

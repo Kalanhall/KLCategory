@@ -41,13 +41,37 @@
         NSLogAlert(@"Hello World");
     }];
     
-
+    NSLogInfos(@"MAC地址：%@", UIDevice.kl_macAddress);
+    
+    UIImageView *bg = UIImageView.new;
+    bg.frame = (CGRect){20, 80, 200, 100};
+//    bg.image = [UIImage imageNamed:@"backg"];
+    bg.image = [[UIImage imageNamed:@"backg"].kl_convertToGrayImage kl_imageWithCornerRadius:10];
+    [self.view addSubview:bg];
+    
+    UILabel *lb = UILabel.new;
+    lb.text = @"测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字";
+    lb.numberOfLines = 0;
+    lb.textColor = UIColor.blackColor;
+    lb.frame = (CGRect){20, 180, 200, 100};
+    lb.layer.borderWidth = 1;
+    [self.view addSubview:lb];
+    // 字间距
+    [lb kl_setColumnspace:1];
+    // 行间距
+    [lb kl_setRowspace:1];
+    
+    // 添加点击事件
+    __weak typeof(self) ws = self;
+    [self.view kl_tapCompletion:^(UITapGestureRecognizer *tapGesture) {
+//        NSLogAlert(@"Hello World");
+        [ws.navigationController pushViewController:KLViewController.new animated:YES];
+    }];
+    
+    [self.view kl_longPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
+        NSLogAlert(@"Hello World");
+    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

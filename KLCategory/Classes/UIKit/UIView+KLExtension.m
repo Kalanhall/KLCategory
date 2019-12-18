@@ -391,4 +391,43 @@
     objc_setAssociatedObject(self, @selector(kl_shouldAnimateBadge), number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+// MARK: - 快捷事件注册
+- (void)kl_tapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion
+{
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_tapCompletion:));
+    if (gesture == nil) {
+        gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
+        objc_setAssociatedObject(self, @selector(kl_tapCompletion:), gesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self addGestureRecognizer:gesture];
+    }
+    objc_setAssociatedObject(self, @selector(tapGesture:), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)tapGesture:(UITapGestureRecognizer *)gesture
+{
+    void (^block)(UITapGestureRecognizer *tapGesture) = objc_getAssociatedObject(self, @selector(tapGesture:));
+    if (block) block(gesture);
+}
+
+- (void)kl_longPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion
+{
+    self.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_longPressCompletion:));
+    if (gesture == nil) {
+        gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
+        [self addGestureRecognizer:gesture];
+        objc_setAssociatedObject(self, @selector(kl_longPressCompletion:), completion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    objc_setAssociatedObject(self, @selector(longPressGesture:), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)longPressGesture:(UILongPressGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        void (^block)(UILongPressGestureRecognizer *tapGesture) = objc_getAssociatedObject(self, @selector(longPressGesture:));
+        if (block) block(gesture);
+    }
+}
+
 @end

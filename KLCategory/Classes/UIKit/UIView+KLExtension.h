@@ -54,4 +54,8 @@
 /// 显示角标是否要缩放动画
 @property (assign, nonatomic) IBInspectable BOOL kl_shouldAnimateBadge;
 
+// MARK: - 快捷事件注册
+- (void)kl_tapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion;
+- (void)kl_longPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion;
+
 @end

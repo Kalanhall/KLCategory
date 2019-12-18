@@ -15,6 +15,7 @@
 
 + (void)load {
     KLExchangeImplementations(self, @selector(viewDidLoad), self, @selector(kl_viewDidLoad));
+    KLExchangeImplementations(self, NSSelectorFromString(@"dealloc"), self, @selector(kl_dealloc));
 }
 
 - (void)kl_viewDidLoad {
