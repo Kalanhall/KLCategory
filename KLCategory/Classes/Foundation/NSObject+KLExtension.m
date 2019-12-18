@@ -6,6 +6,8 @@
 //
 
 #import "NSObject+KLExtension.h"
+#import "UIColor+KLExtension.h"
+#import "UIImage+KLExtension.h"
 
 @implementation NSObject (KLExtension)
 
@@ -51,48 +53,89 @@ CGFloat KLAutoBottom(void) {
     return KLAutoBottomInset() + 49.0;
 }
 
+UIFont *KLAutoFont(CGFloat size) {
+    return [UIFont systemFontOfSize:KLAuto(size)];
+}
+
+UIFont *KLAutoBoldFont(CGFloat size) {
+    return [UIFont boldSystemFontOfSize:KLAuto(size)];
+}
+
+UIFont *KLAutoNameFont(NSString *name, CGFloat size) {
+    return [UIFont fontWithName:name size:KLAuto(size)];
+}
+
+UIColor *KLColor(unsigned int hexNumber) {
+    return [UIColor kl_colorWithHexNumber:hexNumber];
+}
+
+UIColor *KLColorAlpha(unsigned int hexNumber, CGFloat alpha) {
+    return [UIColor kl_colorWithHexNumber:hexNumber alpha:alpha];
+}
+
+UIImage *KLImageHex(unsigned int hexNumber) {
+    return [UIImage kl_imageWithColor:KLColor(hexNumber)];
+}
+
+UIImage *KLImageColor(UIColor *color) {
+    return [UIImage kl_imageWithColor:color];
+}
+
+UIImage *KLImageHexSize(unsigned int hexNumber, CGSize size) {
+    return [UIImage kl_imageWithColor:KLColor(hexNumber) size:size];
+}
+
+UIImage *KLImageColorSize(UIColor *color, CGSize size) {
+    return [UIImage kl_imageWithColor:color size:size];
+}
+
+CGFloat KLDegreesToRadian(CGFloat degrees) {
+    return (M_PI * (degrees) / 180.0);
+}
+
+CGFloat KLRadianToDegrees(CGFloat radian) {
+    return (radian * 180.0) / (M_PI);
+}
+
 BOOL KLIsphone(void) {
     return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
 }
 
 BOOL KLIsphoneXabove(void) {
-    return KLAutoBottomInset() > 0;
+    return KLIsphone() && KLAutoBottomInset() > 0;
 }
 
 UIViewController *KLCurrentController(void)
+{ return [NSObject kl_findBestViewController:UIApplication.sharedApplication.keyWindow.rootViewController]; }
+
++ (UIViewController *)kl_findBestViewController:(UIViewController *)vc
 {
-     UIView *tempView;
-     for (UIView *subview in UIApplication.sharedApplication.keyWindow.subviews.reverseObjectEnumerator) {
-         if ([subview isKindOfClass:NSClassFromString(@"UILayoutContainerView")]) {
-             tempView = subview;
-             break;
-         }
-     }
-     BOOL(^canNext)(UIResponder *) = ^(UIResponder *responder){
-         if (![responder isKindOfClass:[UIViewController class]]) {
-             return YES;
-         } else if ([responder isKindOfClass:[UINavigationController class]]) {
-             return YES;
-         } else if ([responder isKindOfClass:[UITabBarController class]]) {
-             return YES;
-         } else if ([responder isKindOfClass:NSClassFromString(@"UIInputWindowController")]) {
-             return YES;
-         }
-         return NO;
-     };
-     UIResponder *nextResponder = tempView.nextResponder;
-     while (canNext(nextResponder)) {
-         tempView = tempView.subviews.firstObject;
-         if (!tempView) {
-             return nil;
-         }
-         nextResponder = tempView.nextResponder;
-     }
-     UIViewController *currentVC = (UIViewController *)nextResponder;
-     if (currentVC) {
-         return currentVC;
-     }
-    return nil;
+    if (vc.presentedViewController) {
+        return [self kl_findBestViewController:vc.presentedViewController];
+    } else if ([vc isKindOfClass:[UISplitViewController class]]) {
+        UISplitViewController* svc = (UISplitViewController*)vc;
+        if (svc.viewControllers.count > 0) {
+            return [self kl_findBestViewController:svc.viewControllers.lastObject];
+        } else {
+            return vc;
+        }
+    } else if ([vc isKindOfClass:[UINavigationController class]]) {
+        UINavigationController* svc = (UINavigationController*)vc;
+        if (svc.viewControllers.count > 0) {
+            return [self kl_findBestViewController:svc.topViewController];
+        } else {
+            return vc;
+        }
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        UITabBarController* svc = (UITabBarController *)vc;
+        if (svc.viewControllers.count > 0) {
+            return [self kl_findBestViewController:svc.selectedViewController];
+        } else {
+            return vc;
+        }
+    } else {
+        return vc;
+    }
 }
 
 @end

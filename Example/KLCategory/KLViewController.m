@@ -60,6 +60,7 @@
     [lb kl_setColumnspace:1];
     // 行间距
     [lb kl_setRowspace:1];
+    lb.font = KLAutoBoldFont(12);
     
     // 添加点击事件
     [self.view kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
@@ -70,6 +71,8 @@
     [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
         NSLogAlert(@"Hello World");
     }];
+    
+    NSLogDebug(@"%@", KLCurrentController());
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
