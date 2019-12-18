@@ -26,10 +26,10 @@
     // see Tests.m
     
     // UI Test
-//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusNormal) margin:5];
-    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageTop) margin:5];
-//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageBottom) margin:5];
-//    [self.statusBtn kl_layoutWithStatus:(KLLayoutStatusImageRight) margin:5];
+//    [self.statusBtn kl_layoutWithStatus:KLLayoutStatusNormal margin:5];
+    [self.statusBtn kl_layoutWithStatus:KLLayoutStatusImageTop margin:5];
+//    [self.statusBtn kl_layoutWithStatus:KLLayoutStatusImageBottom margin:5];
+//    [self.statusBtn kl_layoutWithStatus:KLLayoutStatusImageRight margin:5];
 }
 
 - (void)didReceiveMemoryWarning
