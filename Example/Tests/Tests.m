@@ -30,11 +30,14 @@
 - (void)testNSLogger
 {
     // NSLogger
-    NSLogDebug(@"origin：%f Top：%f Bottom：%f", Auto(30), AutoTop(), AutoBottom());
-    NSLogInfo(@"Keychain：%@", UIDevice.kl_identifierByKeychain);
-    NSLogWarning(@"Warning!");
-    NSLogSuccess(@"Success!");
-    NSLogError(@"Error!");
+    NSLogVerbose(@"Normal Logger!");
+    NSLogAlert(@"Alert Logger!");
+    NSLogDebug(@"Debug Logger!");
+    NSLogInfos(@"Infomation Logger!");
+    NSLogWarning(@"Warning Logger!");
+    NSLogSuccess(@"Success Logger!");
+    NSLogError(@"Error Logger!");
+    NSLogNetwork(@"Request Logger!")
 }
 
 - (void)testNSDate

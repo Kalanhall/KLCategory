@@ -7,12 +7,13 @@
 //
 
 #define LOG_LEVEL_NOLOG     99
-#define LOG_LEVEL_ERROR     70
-#define LOG_LEVEL_SUCCESS   60
-#define LOG_LEVEL_WARNING   50
-#define LOG_LEVEL_NOTICE    40
-#define LOG_LEVEL_INFO      30
-#define LOG_LEVEL_DEBUG     20
+#define LOG_LEVEL_ERROR     80
+#define LOG_LEVEL_SUCCESS   70
+#define LOG_LEVEL_WARNING   60
+#define LOG_LEVEL_NOTICE    50
+#define LOG_LEVEL_INFO      40
+#define LOG_LEVEL_DEBUG     30
+#define LOG_LEVEL_Network   20
 #define LOG_LEVEL_ALERT     10
 #define LOG_LEVEL_VERBOSE   0
 
@@ -57,9 +58,9 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_INFO
-#define NSLogInfo(...) NSFormattedLog(LOG_LEVEL_INFO, @"\t♻️♻️♻️\t", __VA_ARGS__)
+#define NSLogInfos(...) NSFormattedLog(LOG_LEVEL_INFO, @"\t🌪🌪🌪\t", __VA_ARGS__)
 #else
-#define NSLogInfo(...)
+#define NSLogInfos(...)
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_DEBUG
@@ -68,10 +69,10 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 #define NSLogDebug(...)
 #endif
 
-#if NSLogThreshold <= LOG_LEVEL_VERBOSE
-#define NSLogVerbose(...) NSFormattedLog(LOG_LEVEL_VERBOSE, @"\t🐠🐠🐠\t", __VA_ARGS__)
+#if NSLogThreshold <= LOG_LEVEL_Network
+#define NSLogNetwork(...) NSFormattedLog(LOG_LEVEL_Network, @"\t💥💥💥\t", __VA_ARGS__)
 #else
-#define NSLogVerbose(...)
+#define NSLogNetwork(...)
 #endif
 
 #if NSLogThreshold <= LOG_LEVEL_ALERT
@@ -87,4 +88,10 @@ NSControlledLog(level, @"%@ %s Line:%d\n%@: %@", _NSFile, _NSFunc, _NSLine, tag,
 }()
 #else
 #define NSLogAlert(...)
+#endif
+
+#if NSLogThreshold <= LOG_LEVEL_VERBOSE
+#define NSLogVerbose(...) NSFormattedLog(LOG_LEVEL_VERBOSE, @"\t🐠🐠🐠\t", __VA_ARGS__)
+#else
+#define NSLogVerbose(...)
 #endif
