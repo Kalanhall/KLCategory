@@ -55,7 +55,7 @@
 @property (assign, nonatomic) IBInspectable BOOL kl_shouldAnimateBadge;
 
 // MARK: - 快捷事件注册
-- (void)kl_tapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion;
-- (void)kl_longPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion;
+- (void)kl_setTapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion;
+- (void)kl_setLongPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion;
 
 @end

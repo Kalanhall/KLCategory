@@ -63,12 +63,12 @@
     
     // 添加点击事件
     __weak typeof(self) ws = self;
-    [self.view kl_tapCompletion:^(UITapGestureRecognizer *tapGesture) {
+    [self.view kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
 //        NSLogAlert(@"Hello World");
         [ws.navigationController pushViewController:KLViewController.new animated:YES];
     }];
     
-    [self.view kl_longPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
+    [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
         NSLogAlert(@"Hello World");
     }];
 }

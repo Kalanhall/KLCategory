@@ -392,13 +392,13 @@
 }
 
 // MARK: - 快捷事件注册
-- (void)kl_tapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion
+- (void)kl_setTapCompletion:(void (^)(UITapGestureRecognizer *tapGesture))completion
 {
     self.userInteractionEnabled = YES;
-    UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_tapCompletion:));
+    UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_setTapCompletion:));
     if (gesture == nil) {
         gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
-        objc_setAssociatedObject(self, @selector(kl_tapCompletion:), gesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(kl_setTapCompletion:), gesture, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         [self addGestureRecognizer:gesture];
     }
     objc_setAssociatedObject(self, @selector(tapGesture:), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -410,14 +410,14 @@
     if (block) block(gesture);
 }
 
-- (void)kl_longPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion
+- (void)kl_setLongPressCompletion:(void (^)(UILongPressGestureRecognizer *tapGesture))completion
 {
     self.userInteractionEnabled = YES;
-    UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_longPressCompletion:));
+    UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, @selector(kl_setLongPressCompletion:));
     if (gesture == nil) {
         gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
         [self addGestureRecognizer:gesture];
-        objc_setAssociatedObject(self, @selector(kl_longPressCompletion:), completion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(kl_setLongPressCompletion:), completion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     objc_setAssociatedObject(self, @selector(longPressGesture:), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
