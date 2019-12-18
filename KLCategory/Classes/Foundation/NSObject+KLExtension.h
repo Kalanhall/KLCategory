@@ -11,6 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (KLExtension)
 
+// MARK: - Foundation
+/// 是否是苹果手机
+extern BOOL KLIsphone(void);
+/// 是否是iPhoneX系列刘海屏
+extern BOOL KLIsphoneXabove(void);
+
 /// 屏幕宽度
 extern CGFloat KLScreenWidth(void);
 /// 屏幕高度
@@ -27,6 +33,7 @@ extern CGFloat KLAutoBottom(void);
 /// iPhoneX底部安全高度
 extern CGFloat KLAutoBottomInset(void);
 
+// MARK: - UIKit
 /// 自适配字体
 extern UIFont *KLAutoFont(CGFloat size);
 /// 自适配粗体字体
@@ -50,6 +57,14 @@ extern UIImage *KLImageHexSize(unsigned int hexNumber, CGSize size);
 /// 指定尺寸纯色图片
 extern UIImage *KLImageColorSize(UIColor *color, CGSize size);
 
+/// 获取应用当前控制器
+///
+/// 注意：需要等到控制器viewDidAppear之后才能获取到正确的控制器
+/// 使用：KLCurrentController()
+/// @return 应用顶层控制器实例
+extern UIViewController *KLCurrentController(void);
+
+// MARK: - Math
 /// 角度转弧度
 /// @param degrees 角度
 extern CGFloat KLDegreesToRadian(CGFloat degrees);
@@ -57,17 +72,14 @@ extern CGFloat KLDegreesToRadian(CGFloat degrees);
 /// @param radian 弧度
 extern CGFloat KLRadianToDegrees(CGFloat radian);
 
-/// 是否是苹果手机
-extern BOOL KLIsphone(void);
-/// 是否是iPhoneX系列刘海屏
-extern BOOL KLIsphoneXabove(void);
-
-/// 获取应用当前控制器
-///
-/// 注意：需要等到控制器viewDidAppear之后才能获取到正确的控制器
-/// 使用：KLCurrentController()
-/// @return 应用顶层控制器实例
-extern UIViewController *KLCurrentController(void);
+/// 计算数组和
+extern CGFloat KLSumOfArray(NSArray *numbers);
+/// 计算数组平均值
+extern CGFloat KLAverageOfArray(NSArray *numbers);
+/// 获取数组最大值
+extern CGFloat KLMaxNumberOfArray(NSArray *numbers);
+/// 获取数组最小值
+extern CGFloat KLMinNumberOfArray(NSArray *numbers);
 
 @end
 

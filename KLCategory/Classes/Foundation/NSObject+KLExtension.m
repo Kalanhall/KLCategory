@@ -11,6 +11,15 @@
 
 @implementation NSObject (KLExtension)
 
+// MARK: - Foundation
+BOOL KLIsphone(void) {
+    return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
+}
+
+BOOL KLIsphoneXabove(void) {
+    return KLIsphone() && KLAutoBottomInset() > 0;
+}
+
 CGFloat KLScreenWidth(void) {
     return UIScreen.mainScreen.bounds.size.width;
 }
@@ -53,6 +62,7 @@ CGFloat KLAutoBottom(void) {
     return KLAutoBottomInset() + 49.0;
 }
 
+// MARK: - UIKit
 UIFont *KLAutoFont(CGFloat size) {
     return [UIFont systemFontOfSize:KLAuto(size)];
 }
@@ -89,22 +99,6 @@ UIImage *KLImageColorSize(UIColor *color, CGSize size) {
     return [UIImage kl_imageWithColor:color size:size];
 }
 
-CGFloat KLDegreesToRadian(CGFloat degrees) {
-    return (M_PI * (degrees) / 180.0);
-}
-
-CGFloat KLRadianToDegrees(CGFloat radian) {
-    return (radian * 180.0) / (M_PI);
-}
-
-BOOL KLIsphone(void) {
-    return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
-}
-
-BOOL KLIsphoneXabove(void) {
-    return KLIsphone() && KLAutoBottomInset() > 0;
-}
-
 UIViewController *KLCurrentController(void)
 { return [NSObject kl_findBestViewController:UIApplication.sharedApplication.keyWindow.rootViewController]; }
 
@@ -136,6 +130,39 @@ UIViewController *KLCurrentController(void)
     } else {
         return vc;
     }
+}
+
+// MARK: - Math
+CGFloat KLDegreesToRadian(CGFloat degrees) {
+    return (M_PI * (degrees) / 180.0);
+}
+
+CGFloat KLRadianToDegrees(CGFloat radian) {
+    return (radian * 180.0) / (M_PI);
+}
+
+CGFloat KLSumOfArray(NSArray *numbers) {
+    CGFloat sum = 0;
+    sum = [[numbers valueForKeyPath:@"@sum.floatValue"] floatValue];
+    return sum;
+}
+
+CGFloat KLAverageOfArray(NSArray *numbers) {
+    CGFloat avg = 0;
+    avg = [[numbers valueForKeyPath:@"@avg.floatValue"] floatValue];
+    return avg;
+}
+
+CGFloat KLMaxNumberOfArray(NSArray *numbers) {
+    CGFloat max = 0;
+    max = [[numbers valueForKeyPath:@"@max.floatValue"] floatValue];
+    return max;
+}
+
+CGFloat KLMinNumberOfArray(NSArray *numbers) {
+    CGFloat min = 0;
+    min = [[numbers valueForKeyPath:@"@min.floatValue"] floatValue];
+    return min;
 }
 
 @end

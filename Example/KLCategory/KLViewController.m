@@ -71,8 +71,12 @@
     [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
         NSLogAlert(@"Hello World");
     }];
-    
-    NSLogDebug(@"%@", KLCurrentController());
+ 
+     NSLogDebug(@"%@", KLCurrentController());
+     NSLogDebug(@"求和：%f", KLSumOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
+     NSLogDebug(@"均值：%f", KLAverageOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
+     NSLogDebug(@"最大：%f", KLMaxNumberOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
+     NSLogDebug(@"最小：%f", KLMinNumberOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
