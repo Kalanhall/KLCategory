@@ -6,6 +6,7 @@
 //
 
 #import "UIButton+KLExtension.h"
+#import <objc/runtime.h>
 
 @implementation UIButton (KLExtension)
 
@@ -48,6 +49,18 @@
         default:
             break;
     }
+}
+
+- (void)kl_controlEvents:(UIControlEvents)events completion:(void (^)(UIButton *sender))completion
+{
+    objc_setAssociatedObject(self, @selector(kl_controlEvents:completion:), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self addTarget:self action:@selector(touchUpInside:) forControlEvents:events];
+}
+
+- (void)touchUpInside:(UIButton *)sender
+{
+    void (^block)(UIButton *sender) = objc_getAssociatedObject(self, @selector(kl_controlEvents:completion:));
+    if (block) block(sender);
 }
 
 @end

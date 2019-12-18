@@ -12,6 +12,7 @@
 @implementation UIViewController (KLLogKLExtension)
 
 #ifdef DEBUG
+
 + (void)load {
     KLExchangeImplementations(self, @selector(viewDidLoad), self, @selector(kl_viewDidLoad));
 }

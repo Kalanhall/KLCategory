@@ -23,7 +23,7 @@
 #import "UIColor+KLExtension.h"
 #import "UIDevice+KLExtension.h"
 #import "UIImage+KLExtension.h"
-#import "UIView+KLFrame.h"
+#import "UIView+KLExtension.h"
 #import "UIViewController+KLLogExtension.h"
 
 FOUNDATION_EXPORT double KLCategoryVersionNumber;
