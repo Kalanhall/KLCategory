@@ -77,6 +77,8 @@
      NSLogDebug(@"均值：%f", KLAverageOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
      NSLogDebug(@"最大：%f", KLMaxNumberOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
      NSLogDebug(@"最小：%f", KLMinNumberOfArray(@[@"1", @"2", @"3", @"4", @"5"]));
+    
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
