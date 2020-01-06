@@ -1,5 +1,5 @@
 PODS:
-  - KLCategory (1.0.5)
+  - KLCategory (1.0.6)
   - KLLeaks (1.0.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCategory: 2326f3a4ea38afb0626de03ffc7ff2f5e081b854
+  KLCategory: 0838b9a599483a3f0440d2903d5b68bb4204f18e
   KLLeaks: 2c098234d67353bc2286d4eec6feeff14163136c
 
 PODFILE CHECKSUM: 667ab6309ae3b607bd52111077ef2c194d137a0c
