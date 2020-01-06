@@ -4,6 +4,7 @@ platform :ios, '8.0'
 
 target 'KLCategory_Example' do
   pod 'KLCategory', :path => '../'
+  pod 'KLLeaks'
   
   target 'KLCategory_Tests' do
     inherit! :search_paths

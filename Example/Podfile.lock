@@ -1,16 +1,23 @@
 PODS:
-  - KLCategory (1.0.4)
+  - KLCategory (1.0.5)
+  - KLLeaks (1.0.0)
 
 DEPENDENCIES:
   - KLCategory (from `../`)
+  - KLLeaks
+
+SPEC REPOS:
+  trunk:
+    - KLLeaks
 
 EXTERNAL SOURCES:
   KLCategory:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCategory: 51d485d98b3b4505744c443a0940c7d02e8e336f
+  KLCategory: 2326f3a4ea38afb0626de03ffc7ff2f5e081b854
+  KLLeaks: 2c098234d67353bc2286d4eec6feeff14163136c
 
-PODFILE CHECKSUM: 9c655acf6a6bd80172953096cb7e592b2e22963c
+PODFILE CHECKSUM: 667ab6309ae3b607bd52111077ef2c194d137a0c
 
 COCOAPODS: 1.8.3

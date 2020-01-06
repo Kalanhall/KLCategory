@@ -33,7 +33,11 @@
     // 更新位移
     self.statusBtn.kl_shadowOffset = CGSizeMake(3, 3);
     
-    self.statusBtn.kl_badgeValue = @"8";
+    self.statusBtn.kl_badgeValue = @"8℃";
+    self.statusBtn.kl_badgeTextColor = UIColor.redColor;
+    self.statusBtn.kl_badgeBGColor = UIColor.whiteColor;
+    self.statusBtn.kl_badge.layer.borderWidth = 1;
+    self.statusBtn.kl_badge.layer.borderColor = UIColor.redColor.CGColor;
     
     [self.statusBtn kl_layoutWithStyle:KLLayoutStyleImageTop margin:5];
     
@@ -41,7 +45,7 @@
         NSLogAlert(@"Hello World");
     }];
     
-    NSLogInfos(@"MAC地址：%@", UIDevice.kl_macAddress);
+    NSLogInfos(@"KeychainIdentifier：%@", UIDevice.kl_identifierByKeychain);
     
     UIImageView *bg = UIImageView.new;
     bg.frame = (CGRect){20, 80, 200, 100};
@@ -65,19 +69,15 @@
     // 添加点击事件
     [self.view kl_setTapCompletion:^(UITapGestureRecognizer *tapGesture) {
 //        NSLogAlert(@"Hello World");
-        [KLCurrentController() presentViewController:KLViewController.new animated:YES completion:nil];
+        UINavigationController *nav = [UINavigationController.alloc initWithRootViewController:KLViewController.new];
+        [KLCurrentController() presentViewController:nav animated:YES completion:nil];
     }];
     
     [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
-        NSLogAlert(@"Hello World");
+        NSLogWarning(@"Hello World");
     }];
 
 
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

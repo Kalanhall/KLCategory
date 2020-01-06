@@ -1,6 +1,6 @@
 {
   "name": "KLCategory",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "summary": "分类组件",
   "description": "组件简介：\n常用分类；",
   "homepage": "https://github.com/Kalanhall",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Kalanhall/KLCategory.git",
-    "tag": "1.0.4"
+    "tag": "1.0.5"
   },
   "platforms": {
     "ios": "9.0"
