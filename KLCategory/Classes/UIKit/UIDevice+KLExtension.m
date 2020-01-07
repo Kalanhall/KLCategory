@@ -21,7 +21,7 @@
         NSString* service = @"KLVirtualDeviceIdentifierKeychainService";
         NSString* account = @"KLVirtualDeviceIdentifier";
         // 获取iOS系统推荐的设备唯一ID
-        NSString* recommendDeviceIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        NSString* recommendDeviceIdentifier = UIDevice.currentDevice.identifierForVendor.UUIDString;
         recommendDeviceIdentifier = [recommendDeviceIdentifier stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSMutableDictionary* queryDic = [NSMutableDictionary dictionary];
         [queryDic setObject:(__bridge id)kSecClassGenericPassword forKey:(__bridge id)kSecClass];

@@ -38,6 +38,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="gOm-Xv-KNo" kind="show" id="cdE-l7-4Eq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,6 +58,56 @@
             </objects>
             <point key="canvasLocation" x="844" y="282.90854572713647"/>
         </scene>
+        <!--Test Controller-->
+        <scene sceneID="Dh9-rS-BQS">
+            <objects>
+                <viewController id="gOm-Xv-KNo" customClass="KLTestController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcU-zU-q7B"/>
+                        <viewControllerLayoutGuide type="bottom" id="HMM-aT-FW1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWC-Un-dQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KjV-bg-qg8">
+                                <rect key="frame" x="0.0" y="131" width="375" height="405"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="405" id="Ez5-Fv-ETx"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="66" id="9ja-IE-7uJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ja-IE-7uJ" id="pW3-ny-8JV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gOm-Xv-KNo" id="zDx-5Q-gww"/>
+                                    <outlet property="delegate" destination="gOm-Xv-KNo" id="avZ-tM-MD2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KjV-bg-qg8" secondAttribute="trailing" id="Pbo-XX-O01"/>
+                            <constraint firstItem="KjV-bg-qg8" firstAttribute="centerY" secondItem="jWC-Un-dQ5" secondAttribute="centerY" id="Qfz-Xz-kKG"/>
+                            <constraint firstItem="KjV-bg-qg8" firstAttribute="leading" secondItem="jWC-Un-dQ5" secondAttribute="leading" id="wV3-7F-WmK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vhy-vX-zc2"/>
+                    <connections>
+                        <outlet property="tableView" destination="KjV-bg-qg8" id="cHw-8p-7zY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTo-wG-Jqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="279.31034482758622"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="IlR-4R-2Ta">
             <objects>
@@ -71,7 +124,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLU-2I-BGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.200000000000003" y="282.90854572713647"/>
+            <point key="canvasLocation" x="-524" y="106"/>
         </scene>
     </scenes>
     <resources>

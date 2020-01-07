@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		F69CC03D23C4717B00C32B3F /* KLTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69CC03C23C4717B00C32B3F /* KLTestController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		9D48FC3792DFE0418AC35156 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AF957AFA3FF384E63976A050 /* Pods_KLCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLCategory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC971B24D9BE45AA11EF2D77 /* Pods-KLCategory_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCategory_Example.debug.xcconfig"; path = "Target Support Files/Pods-KLCategory_Example/Pods-KLCategory_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F69CC03B23C4717B00C32B3F /* KLTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTestController.h; sourceTree = "<group>"; };
+		F69CC03C23C4717B00C32B3F /* KLTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTestController.m; sourceTree = "<group>"; };
 		FF0799A0C5DEAC4BBDA646EB /* Pods-KLCategory_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCategory_Example.release.xcconfig"; path = "Target Support Files/Pods-KLCategory_Example/Pods-KLCategory_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +140,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* KLViewController.h */,
 				6003F5A6195388D20070C39A /* KLViewController.m */,
+				F69CC03B23C4717B00C32B3F /* KLTestController.h */,
+				F69CC03C23C4717B00C32B3F /* KLTestController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -369,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69CC03D23C4717B00C32B3F /* KLTestController.m in Sources */,
 				6003F59E195388D20070C39A /* KLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* KLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

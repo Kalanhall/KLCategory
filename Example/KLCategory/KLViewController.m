@@ -22,7 +22,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = UIColor.whiteColor;
     
     // see Tests.m
     
@@ -41,9 +40,9 @@
     
     [self.statusBtn kl_layoutWithStyle:KLLayoutStyleImageTop margin:5];
     
-    [self.statusBtn kl_controlEvents:UIControlEventTouchUpInside completion:^(UIButton * _Nonnull sender) {
-        NSLogAlert(@"Hello World");
-    }];
+//    [self.statusBtn kl_controlEvents:UIControlEventTouchUpInside completion:^(UIButton * _Nonnull sender) {
+//        NSLogAlert(@"Hello World");
+//    }];
     
     NSLogInfos(@"KeychainIdentifier：%@", UIDevice.kl_identifierByKeychain);
     
@@ -76,8 +75,8 @@
     [self.view kl_setLongPressCompletion:^(UILongPressGestureRecognizer *tapGesture) {
         NSLogWarning(@"Hello World");
     }];
-
-
+    
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 @end
