@@ -13,6 +13,18 @@
 #include <spawn.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+#import <sys/utsname.h>
+#import <ifaddrs.h>
+#import <arpa/inet.h>
+#import <sys/sysctl.h>
+
+#define IOS_AWDL        @"awdl0"
+#define IOS_CELLULAR    @"pdp_ip0"
+#define IOS_WIFI        @"en0"
+#define IOS_LOC         @"lo0"
+#define IOS_VPN         @"utun0"
+#define IP_ADDR_IPv4    @"ipv4"
+#define IP_ADDR_IPv6    @"ipv6"
 
 @implementation UIDevice (KLSystemInfo)
 
@@ -190,5 +202,175 @@ static const char *__jb_app = NULL;
 
     return carrier.mobileNetworkCode;
 }
+
++ (NSString *)kl_IPV4
+{
+    return [self kl_ipAddress:YES];
+}
+
++ (NSString *)kl_IPV6
+{
+    return [self kl_ipAddress:NO];
+}
+
++ (NSString *)kl_ipAddress:(BOOL)preferIPv4
+{
+    NSArray *searchArray = preferIPv4 ?
+        @[IOS_WIFI @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6, IOS_AWDL @"/" IP_ADDR_IPv4, IOS_AWDL @"/" IP_ADDR_IPv6, IOS_LOC @"/" IP_ADDR_IPv4, IOS_LOC @"/" IP_ADDR_IPv6] :
+    @[IOS_WIFI @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4, IOS_AWDL @"/" IP_ADDR_IPv6, IOS_AWDL @"/" IP_ADDR_IPv4, IOS_LOC @"/" IP_ADDR_IPv6, IOS_LOC @"/" IP_ADDR_IPv4];
+
+    NSDictionary *addresses = [self kl_getIPAddresses];
+
+    NSLog(@"addresses: %@", addresses);
+
+    __block NSString *address;
+    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop)
+    {
+        address = addresses[key];
+
+        if (address) {
+            *stop = YES;
+        }
+    }];
+    return address ? address : @"0.0.0.0";
+}
+
++ (NSDictionary *)kl_getIPAddresses
+{
+    NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
+
+    // retrieve the current interfaces - returns 0 on success
+    struct ifaddrs *interfaces;
+
+    if (!getifaddrs(&interfaces)) {
+        // Loop through linked list of interfaces
+        struct ifaddrs *interface;
+
+        for (interface = interfaces; interface; interface = interface->ifa_next) {
+            if (!(interface->ifa_flags & IFF_UP) /* || (interface->ifa_flags & IFF_LOOPBACK) */) {
+                continue; // deeply nested code harder to read
+            }
+            const struct sockaddr_in *addr = (const struct sockaddr_in *)interface->ifa_addr;
+            char addrBuf[MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN)];
+
+            if (addr && (addr->sin_family == AF_INET || addr->sin_family == AF_INET6)) {
+                NSString *name = [NSString stringWithUTF8String:interface->ifa_name];
+                NSString *type;
+
+                if (addr->sin_family == AF_INET) {
+                    if (inet_ntop(AF_INET, &addr->sin_addr, addrBuf, INET_ADDRSTRLEN)) {
+                        type = IP_ADDR_IPv4;
+                    }
+                }
+                else {
+                    const struct sockaddr_in6 *addr6 = (const struct sockaddr_in6 *)interface->ifa_addr;
+
+                    if (inet_ntop(AF_INET6, &addr6->sin6_addr, addrBuf, INET6_ADDRSTRLEN)) {
+                        type = IP_ADDR_IPv6;
+                    }
+                }
+
+                if (type) {
+                    NSString *key = [NSString stringWithFormat:@"%@/%@", name, type];
+                    addresses[key] = [NSString stringWithUTF8String:addrBuf];
+                }
+            }
+        }
+
+        // Free memory
+        freeifaddrs(interfaces);
+    }
+    return [addresses count] ? addresses : nil;
+}
+
+// Credit to https://www.jianshu.com/p/f2d83ddb09fe
++ (NSString *)kl_currentModel {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *model = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([model isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
+    if ([model isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
+    if ([model isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
+    if ([model isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
+    if ([model isEqualToString:@"iPhone3,2"])    return @"iPhone 4 Verizon";
+    if ([model isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
+    if ([model isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
+    if ([model isEqualToString:@"iPhone5,3"])    return @"iPhone 5c";
+    if ([model isEqualToString:@"iPhone5,4"])    return @"iPhone 5c";
+    if ([model isEqualToString:@"iPhone6,1"])    return @"iPhone 5s";
+    if ([model isEqualToString:@"iPhone6,2"])    return @"iPhone 5s";
+    if ([model isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
+    if ([model isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([model isEqualToString:@"iPhone8,1"])    return @"iPhone 6s";
+    if ([model isEqualToString:@"iPhone8,2"])    return @"iPhone 6s Plus";
+    if ([model isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
+    if ([model isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
+    if ([model isEqualToString:@"iPhone9,2"])    return @"iPhone 7 Plus";
+    if ([model isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
+    if ([model isEqualToString:@"iPhone9,4"])    return @"iPhone 7 Plus";
+    if ([model isEqualToString:@"iPhone10,1"])   return @"iPhone 8 Global";
+    if ([model isEqualToString:@"iPhone10,2"])   return @"iPhone 8 Plus Global";
+    if ([model isEqualToString:@"iPhone10,3"])   return @"iPhone X Global";
+    if ([model isEqualToString:@"iPhone10,4"])   return @"iPhone 8 GSM";
+    if ([model isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus GSM";
+    if ([model isEqualToString:@"iPhone10,6"])   return @"iPhone X GSM";
+    
+    if ([model isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
+    if ([model isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max (China)";
+    if ([model isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
+    if ([model isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
+    
+    if ([model isEqualToString:@"i386"])         return @"Simulator 32";
+    if ([model isEqualToString:@"x86_64"])       return @"Simulator 64";
+    
+    if ([model isEqualToString:@"iPad1,1"]) return @"iPad";
+    if ([model isEqualToString:@"iPad2,1"] ||
+        [model isEqualToString:@"iPad2,2"] ||
+        [model isEqualToString:@"iPad2,3"] ||
+        [model isEqualToString:@"iPad2,4"]) return @"iPad 2";
+    if ([model isEqualToString:@"iPad3,1"] ||
+        [model isEqualToString:@"iPad3,2"] ||
+        [model isEqualToString:@"iPad3,3"]) return @"iPad 3";
+    if ([model isEqualToString:@"iPad3,4"] ||
+        [model isEqualToString:@"iPad3,5"] ||
+        [model isEqualToString:@"iPad3,6"]) return @"iPad 4";
+    if ([model isEqualToString:@"iPad4,1"] ||
+        [model isEqualToString:@"iPad4,2"] ||
+        [model isEqualToString:@"iPad4,3"]) return @"iPad Air";
+    if ([model isEqualToString:@"iPad5,3"] ||
+        [model isEqualToString:@"iPad5,4"]) return @"iPad Air 2";
+    if ([model isEqualToString:@"iPad6,3"] ||
+        [model isEqualToString:@"iPad6,4"]) return @"iPad Pro 9.7-inch";
+    if ([model isEqualToString:@"iPad6,7"] ||
+        [model isEqualToString:@"iPad6,8"]) return @"iPad Pro 12.9-inch";
+    if ([model isEqualToString:@"iPad6,11"] ||
+        [model isEqualToString:@"iPad6,12"]) return @"iPad 5";
+    if ([model isEqualToString:@"iPad7,1"] ||
+        [model isEqualToString:@"iPad7,2"]) return @"iPad Pro 12.9-inch 2";
+    if ([model isEqualToString:@"iPad7,3"] ||
+        [model isEqualToString:@"iPad7,4"]) return @"iPad Pro 10.5-inch";
+    
+    if ([model isEqualToString:@"iPad2,5"] ||
+        [model isEqualToString:@"iPad2,6"] ||
+        [model isEqualToString:@"iPad2,7"]) return @"iPad mini";
+    if ([model isEqualToString:@"iPad4,4"] ||
+        [model isEqualToString:@"iPad4,5"] ||
+        [model isEqualToString:@"iPad4,6"]) return @"iPad mini 2";
+    if ([model isEqualToString:@"iPad4,7"] ||
+        [model isEqualToString:@"iPad4,8"] ||
+        [model isEqualToString:@"iPad4,9"]) return @"iPad mini 3";
+    if ([model isEqualToString:@"iPad5,1"] ||
+        [model isEqualToString:@"iPad5,2"]) return @"iPad mini 4";
+    
+    if ([model isEqualToString:@"iPod1,1"]) return @"iTouch";
+    if ([model isEqualToString:@"iPod2,1"]) return @"iTouch2";
+    if ([model isEqualToString:@"iPod3,1"]) return @"iTouch3";
+    if ([model isEqualToString:@"iPod4,1"]) return @"iTouch4";
+    if ([model isEqualToString:@"iPod5,1"]) return @"iTouch5";
+    if ([model isEqualToString:@"iPod7,1"]) return @"iTouch6";
+    
+    return @"高端设备，不错哟！";
+}
+
 
 @end
