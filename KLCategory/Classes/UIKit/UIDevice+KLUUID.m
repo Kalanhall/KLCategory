@@ -1,25 +1,40 @@
 //
-//  UIDevice+KLExtension.m
+//  UIDevice+KLUUID.m
 //  KLCategory
 //
-//  Created by Logic on 2019/12/14.
+//  Created by Logic on 2020/1/8.
 //
 
-#import "UIDevice+KLExtension.h"
-#import <Security/Security.h>
-#include <sys/sysctl.h>
-#import <net/if.h>
-#import <net/if_dl.h>
+#import "UIDevice+KLUUID.h"
 
-@implementation UIDevice (KLExtension)
+static NSString* const service = @"KLVirtualDeviceIdentifierKeychainService";
+static NSString* const account = @"KLVirtualDeviceIdentifier";
 
-+ (NSString *)kl_identifierByKeychain;
+@implementation UIDevice (KLUUID)
+
+// Vindor标示符
++ (NSString *)kl_deviceIdentifier
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_MAC)
+    NSUUID *vendorUUID = [[UIDevice currentDevice] identifierForVendor];
+    
+    if (vendorUUID) {
+        return [vendorUUID UUIDString];
+    }
+    else {
+        return nil;
+    }
+    
+#else
+    return nil;
+#endif
+}
+
++ (NSString *)kl_deviceIdentifierForKeyChain
 {
     //该类方法没有线程保护，所以可能因异步而导致创建出不同的设备唯一ID，故而增加此线程锁！
-    @synchronized ([NSNotificationCenter defaultCenter])
+    @synchronized (self)
     {
-        NSString* service = @"KLVirtualDeviceIdentifierKeychainService";
-        NSString* account = @"KLVirtualDeviceIdentifier";
         // 获取iOS系统推荐的设备唯一ID
         NSString* recommendDeviceIdentifier = UIDevice.currentDevice.identifierForVendor.UUIDString;
         recommendDeviceIdentifier = [recommendDeviceIdentifier stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -69,6 +84,60 @@
         }
         return recommendDeviceIdentifier;
     }
+}
+
++ (BOOL)kl_deleteDeviceIdentifierForKeyChain
+{
+    NSMutableDictionary* queryDic = [NSMutableDictionary dictionary];
+    [queryDic setObject:(__bridge id)kSecClassGenericPassword forKey:(__bridge id)kSecClass];
+    [queryDic setObject:service forKey:(__bridge id)kSecAttrService];
+    [queryDic setObject:(__bridge id)kCFBooleanFalse forKey:(__bridge id)kSecAttrSynchronizable];
+    [queryDic setObject:account forKey:(__bridge id)kSecAttrAccount];
+    CFTypeRef keychainPassword = NULL;
+    OSStatus queryResult = SecItemCopyMatching((__bridge CFDictionaryRef)queryDic, &keychainPassword);
+    if (queryResult == errSecSuccess) {
+        OSStatus status = SecItemDelete((__bridge CFDictionaryRef)queryDic);
+        return status == errSecSuccess;
+    }
+    return NO;
+}
+
+// 获取CFUUID
++ (NSString *)kl_deviceCFUUID
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_MAC)
+    CFUUIDRef cfuuid = CFUUIDCreate(kCFAllocatorDefault);
+    NSString *cfuuidString = (NSString *)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, cfuuid));
+    CFRelease(cfuuid);
+    
+    if (cfuuidString) {
+        return cfuuidString;
+    }
+    else {
+        return nil;
+    }
+    
+#else
+    return nil;
+#endif
+}
+
+// 获取NSUUID
++ (NSString *)kl_deviceNSUUID
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_MAC)
+    id uuid = [NSUUID UUID];
+    
+    if (uuid) {
+        return [uuid UUIDString];
+    }
+    else {
+        return nil;
+    }
+    
+#else
+    return nil;
+#endif
 }
 
 @end

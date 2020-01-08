@@ -44,7 +44,9 @@
 //        NSLogAlert(@"Hello World");
 //    }];
     
-    NSLogInfos(@"KeychainIdentifier：%@", UIDevice.kl_identifierByKeychain);
+    NSLogInfos(@"KeychainIdentifier：%@", UIDevice.kl_deviceIdentifierForKeyChain);
+//    [UIDevice kl_deleteDeviceIdentifierForKeyChain];
+//    NSLogInfos(@"KeychainIdentifier：%@", UIDevice.kl_deviceIdentifierForKeyChain);
     
     UIImageView *bg = UIImageView.new;
     bg.frame = (CGRect){20, 80, 200, 100};
