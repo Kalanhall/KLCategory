@@ -33,12 +33,12 @@ Pod::Spec.new do |s|
   
   s.source_files = 'KLCategory/Classes/KLCategory.h'
   
-  s.subspec 'Foundation' do |a|
-    a.source_files = 'KLCategory/Classes/Foundation/*.{h,m}'
+  s.subspec 'Foundation' do |ss|
+    ss.source_files = 'KLCategory/Classes/Foundation/*.{h,m}'
   end
 
-  s.subspec 'UIKit' do |b|
-    b.source_files = 'KLCategory/Classes/UIKit/*.{h,m}'
+  s.subspec 'UIKit' do |ss|
+    ss.source_files = 'KLCategory/Classes/UIKit/*.{h,m}'
   end
   
   # s.resource_bundles = {
