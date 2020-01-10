@@ -19,10 +19,6 @@
     "ios": "9.0"
   },
   "source_files": "KLCategory/Classes/KLCategory.h",
-  "frameworks": [
-    "UIKit",
-    "MapKit"
-  ],
   "subspecs": [
     {
       "name": "Foundation",
