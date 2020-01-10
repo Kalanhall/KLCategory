@@ -6,8 +6,8 @@
 //
 
 #import "UIViewController+KLTraceLog.h"
-#import <KLCategory/NSLogger.h>
-#import <KLCategory/NSRuntime.h>
+#import "NSLogger.h"
+#import "NSRuntime.h"
 
 @implementation UIViewController (KLTraceLog)
 
