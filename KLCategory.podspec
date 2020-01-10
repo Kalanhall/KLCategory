@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KLCategory'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = '分类组件'
 
 # This description is used to generate tags and improve search results.
@@ -31,14 +31,21 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   
-  s.source_files = 'KLCategory/Classes/*/**'
+  s.source_files = 'KLCategory/Classes/KLCategory.h'
   
+  s.subspec 'Foundation' do |a|
+    a.source_files = 'KLCategory/Classes/Foundation/*.{h,m}'
+  end
+
+  s.subspec 'UIKit' do |b|
+    b.source_files = 'KLCategory/Classes/UIKit/*.{h,m}'
+  end
   
   # s.resource_bundles = {
   #   'KLCategory' => ['KLCategory/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

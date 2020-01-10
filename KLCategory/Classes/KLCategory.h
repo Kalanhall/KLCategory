@@ -1,26 +1,26 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
+//
+//  KLCategory.h
+//  KLCategory
+//
+//  Created by Logic on 2020/1/10.
+//
 
-#import "KLCategory.h"
-#import "NSDate+KLExtension.h"
+#ifndef KLCategory_h
+#define KLCategory_h
+
+// MARK: - Foundation
 #import "NSLogger.h"
+#import "NSRuntime.h"
+#import "NSDate+KLExtension.h"
 #import "NSMutableParagraphStyle+KLExtension.h"
 #import "NSObject+KLCoding.h"
 #import "NSObject+KLExtension.h"
 #import "NSObject+KLObserver.h"
 #import "NSObject+KLTouchFaceID.h"
-#import "NSRuntime.h"
 #import "NSString+KLExtension.h"
 #import "NSString+KLValue.h"
+
+// MARK: - UIKit
 #import "UIButton+KLExtension.h"
 #import "UICollectionView+KLCellAutoSize.h"
 #import "UIColor+KLExtension.h"
@@ -31,6 +31,4 @@
 #import "UIView+KLExtension.h"
 #import "UIViewController+KLTraceLog.h"
 
-FOUNDATION_EXPORT double KLCategoryVersionNumber;
-FOUNDATION_EXPORT const unsigned char KLCategoryVersionString[];
-
+#endif /* KLCategory_h */
