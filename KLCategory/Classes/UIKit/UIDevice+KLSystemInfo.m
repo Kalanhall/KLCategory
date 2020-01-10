@@ -63,7 +63,7 @@
     static NSString *__appName = nil;
 
     if (nil == __appName) {
-        __appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+        __appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
     }
 
     return __appName;
@@ -221,8 +221,10 @@ static const char *__jb_app = NULL;
 
     NSDictionary *addresses = [self kl_getIPAddresses];
     __block NSString *address;
-    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
+    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop)
+    {
         address = addresses[key];
+
         if (address) {
             *stop = YES;
         }
