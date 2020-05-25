@@ -24,6 +24,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // see Tests.m
+    for (int i = 0 ; i < 100; i++) {
+        self.view.backgroundColor = [UIColor kl_randomColor];
+    }
     
     // UI Test
     self.statusBtn.kl_shadowColor = UIColor.blackColor;
@@ -78,7 +81,7 @@
         NSLogWarning(@"Hello World");
     }];
     
-    self.view.backgroundColor = UIColor.whiteColor;
+//    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 @end
