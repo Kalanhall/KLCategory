@@ -10,9 +10,9 @@
 @implementation NSObject (Foundation)
 
 // MARK: - Foundation
-static NSString *_versionStringKey = @"CFBundleShortVersionString";
+static NSString *_versionStringKey = @"com.KLCategory.versionKey";
 BOOL KLIsFirstLaunch(void) {
-    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:_versionStringKey];
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     NSString *oldVersion = [NSUserDefaults.standardUserDefaults objectForKey:_versionStringKey];
     if (![currentVersion isEqual:oldVersion]) {
         [NSUserDefaults.standardUserDefaults setObject:currentVersion forKey:_versionStringKey];
