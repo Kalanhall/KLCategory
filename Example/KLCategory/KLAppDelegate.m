@@ -7,12 +7,14 @@
 //
 
 #import "KLAppDelegate.h"
+@import KLCategory;
 
 @implementation KLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    KLViewControllerTraceLogEnable(NO);
     return YES;
 }
 

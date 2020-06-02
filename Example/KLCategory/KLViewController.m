@@ -22,7 +22,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
     // see Tests.m
     for (int i = 0 ; i < 100; i++) {
         self.view.backgroundColor = [UIColor kl_randomColor];
