@@ -40,7 +40,8 @@
     self.statusBtn.kl_badge.layer.borderWidth = 1;
     self.statusBtn.kl_badge.layer.borderColor = UIColor.redColor.CGColor;
     
-    [self.statusBtn kl_layoutWithStyle:KLLayoutStyleImageTop margin:5];
+    self.statusBtn.kl_padding = 5;
+    [self.statusBtn setKl_layoutStyle:KLButtonContentLayoutStyleCenterImageTop];
     
 //    [self.statusBtn kl_controlEvents:UIControlEventTouchUpInside completion:^(UIButton * _Nonnull sender) {
 //        NSLogAlert(@"Hello World");
@@ -64,9 +65,9 @@
     lb.layer.borderWidth = 1;
     [self.view addSubview:lb];
     // 字间距
-    [lb kl_setColumnspace:1];
+    [lb kl_setWordSpace:2];
     // 行间距
-    [lb kl_setRowspace:1];
+    [lb kl_setLineSpace:10];
     lb.font = KLAutoBoldFont(12);
     
     // 添加点击事件
