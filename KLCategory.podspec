@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KLCategory'
-  s.version          = '1.2.4'
+  s.version          = '1.2.4.1'
   s.summary          = '分类组件'
 
 # This description is used to generate tags and improve search results.
