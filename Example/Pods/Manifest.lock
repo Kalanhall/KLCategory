@@ -1,9 +1,9 @@
 PODS:
-  - KLCategory (1.2.0):
-    - KLCategory/Foundation (= 1.2.0)
-    - KLCategory/UIKit (= 1.2.0)
-  - KLCategory/Foundation (1.2.0)
-  - KLCategory/UIKit (1.2.0)
+  - KLCategory (1.3.0):
+    - KLCategory/Foundation (= 1.3.0)
+    - KLCategory/UIKit (= 1.3.0)
+  - KLCategory/Foundation (1.3.0)
+  - KLCategory/UIKit (1.3.0)
   - KLLeaks (1.0.0)
 
 DEPENDENCIES:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCategory: 312870aa31e6efe834a4dfb7c7aab864d72af86f
+  KLCategory: b243230df497c699eeb24acdb4ddd35b57e58457
   KLLeaks: 2c098234d67353bc2286d4eec6feeff14163136c
 
 PODFILE CHECKSUM: 815e500e9b33174ba15cebba42a09458c6ddf69b
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.1
