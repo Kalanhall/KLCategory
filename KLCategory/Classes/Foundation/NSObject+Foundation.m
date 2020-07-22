@@ -14,15 +14,14 @@ static NSString *_versionStringKey = @"com.KLCategory.versionKey";
 
 void KLSetFirstLaunch(void) {
     NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-    NSString *oldVersion = [NSUserDefaults.standardUserDefaults objectForKey:_versionStringKey];
-    if (![currentVersion isEqual:oldVersion]) {
-        [NSUserDefaults.standardUserDefaults setObject:currentVersion forKey:_versionStringKey];
-        [NSUserDefaults.standardUserDefaults synchronize];
-    }
+    [NSUserDefaults.standardUserDefaults setObject:currentVersion forKey:_versionStringKey];
+    [NSUserDefaults.standardUserDefaults synchronize];
 }
 
 BOOL KLGetFirstLaunch(void) {
-    return [NSUserDefaults.standardUserDefaults objectForKey:_versionStringKey];
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString *oldVersion = [NSUserDefaults.standardUserDefaults objectForKey:_versionStringKey];
+    return ![currentVersion isEqual:oldVersion];
 }
 
 void KLClearFirstLaunch(void) {
