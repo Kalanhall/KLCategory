@@ -1,16 +1,24 @@
 //
-//  UIViewController+KLTraceLog.m
+//  UIViewController+KLTrackLog.m
 //  KLExtensions
 //
 //  Created by Logic on 2019/11/20.
 //
 
-#import "UIViewController+KLTraceLog.h"
-#import "NSLogger.h"
-#import "NSObject+UIKit.h"
-#import "KLRuntime.h"
+#import "UIViewController+KLTrackLog.h"
 
-@implementation UIViewController (KLTraceLog)
+#ifdef DEBUG
+#import "NSLogger.h"
+#import "KLRuntime.h"
+#import "NSObject+UIKit.h"
+#endif
+
+@interface UIViewController ()
+
+
+@end
+
+@implementation UIViewController (KLTrackLog)
 
 #ifdef DEBUG
 
@@ -20,16 +28,12 @@
 }
 
 - (void)kl_viewDidLoad {
-    if (KLViewControllerTraceLogEnableState()) {
-        NSLogNotice(@"%@ viewDidLoad", self);
-    }
+    if (self.trackLogEnable) NSLogNotice(@"%@ viewDidLoad", self);
     [self kl_viewDidLoad];
 }
 
 - (void)kl_dealloc {
-    if (KLViewControllerTraceLogEnableState()) {
-        NSLogNotice(@"%@ dealloc", self);
-    }
+    if (self.trackLogEnable) NSLogNotice(@"%@ dealloc", self);
     [self kl_dealloc];
 }
 

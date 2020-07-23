@@ -1,5 +1,5 @@
 //
-//  UIViewController+KLTraceLog.h
+//  UIViewController+KLTrackLog.h
 //  KLExtensions
 //
 //  Created by Logic on 2019/11/20.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (KLTraceLog)
+@interface UIViewController (KLTrackLog)
 
 @end
 

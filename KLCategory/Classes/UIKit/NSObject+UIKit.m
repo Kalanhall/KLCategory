@@ -8,6 +8,7 @@
 #import "NSObject+UIKit.h"
 #import "UIColor+KLExtension.h"
 #import "UIImage+KLExtension.h"
+#import <objc/runtime.h>
 
 @implementation NSObject (UIKit)
 
@@ -92,13 +93,12 @@ UIViewController *KLCurrentController(void)
     return round((origin * (width / base) * divisor)) / divisor;
 }
 
-extern void KLViewControllerTraceLogEnable(BOOL enable) {
-    [NSUserDefaults.standardUserDefaults setValue:@(enable) forKey:@"KLViewControllerTraceLogEnable"];
-    [NSUserDefaults.standardUserDefaults synchronize];
+- (void)setTrackLogEnable:(BOOL)trackLogEnable {
+    objc_setAssociatedObject(NSNotificationCenter.defaultCenter, @selector(trackLogEnable), @(trackLogEnable), OBJC_ASSOCIATION_ASSIGN);
 }
 
-extern BOOL KLViewControllerTraceLogEnableState() {
-    return [[NSUserDefaults.standardUserDefaults valueForKey:@"KLViewControllerTraceLogEnable"] boolValue];
+- (BOOL)trackLogEnable {
+    return [objc_getAssociatedObject(NSNotificationCenter.defaultCenter, @selector(trackLogEnable)) boolValue];
 }
 
 @end
