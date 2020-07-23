@@ -8,7 +8,6 @@
 #import "NSObject+UIKit.h"
 #import "UIColor+KLExtension.h"
 #import "UIImage+KLExtension.h"
-#import <objc/runtime.h>
 
 @implementation NSObject (UIKit)
 
@@ -91,14 +90,6 @@ UIViewController *KLCurrentController(void)
     
     CGFloat divisor = pow(10.0, MAX(0, 3));
     return round((origin * (width / base) * divisor)) / divisor;
-}
-
-- (void)setTrackLogEnable:(BOOL)trackLogEnable {
-    objc_setAssociatedObject(NSNotificationCenter.defaultCenter, @selector(trackLogEnable), @(trackLogEnable), OBJC_ASSOCIATION_ASSIGN);
-}
-
-- (BOOL)trackLogEnable {
-    return [objc_getAssociatedObject(NSNotificationCenter.defaultCenter, @selector(trackLogEnable)) boolValue];
 }
 
 @end

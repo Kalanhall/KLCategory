@@ -6,6 +6,7 @@
 //
 
 #import "UIViewController+KLTrackLog.h"
+#import <objc/runtime.h>
 
 #ifdef DEBUG
 #import "NSLogger.h"
@@ -28,15 +29,23 @@
 }
 
 - (void)kl_viewDidLoad {
-    if (self.trackLogEnable) NSLogNotice(@"%@ viewDidLoad", self);
+    if (UIViewController.trackLogEnable) NSLogNotice(@"%@ viewDidLoad", self);
     [self kl_viewDidLoad];
 }
 
 - (void)kl_dealloc {
-    if (self.trackLogEnable) NSLogNotice(@"%@ dealloc", self);
+    if (UIViewController.trackLogEnable) NSLogNotice(@"%@ dealloc", self);
     [self kl_dealloc];
 }
 
 #endif
+
++ (void)setTrackLogEnable:(BOOL)trackLogEnable {
+    objc_setAssociatedObject(self, @selector(trackLogEnable), @(trackLogEnable), OBJC_ASSOCIATION_ASSIGN);
+}
+
++ (BOOL)trackLogEnable {
+    return [objc_getAssociatedObject(self, @selector(trackLogEnable)) boolValue];
+}
 
 @end

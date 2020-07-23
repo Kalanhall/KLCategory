@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (KLTrackLog)
 
+/// UIViewController 轨迹日志
++ (void)setTrackLogEnable:(BOOL)trackLogEnable;
+
 @end
 
 NS_ASSUME_NONNULL_END

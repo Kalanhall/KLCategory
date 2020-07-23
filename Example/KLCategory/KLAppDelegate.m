@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    self.trackLogEnable = NO;
+//    UIViewController.trackLogEnable = YES;
     return YES;
 }
 

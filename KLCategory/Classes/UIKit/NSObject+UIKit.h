@@ -41,9 +41,6 @@ extern UIImage *KLImageColorSize(UIColor *color, CGSize size);
 /// @return 应用顶层控制器实例
 extern UIViewController *KLCurrentController(void);
 
-/// UIViewController 轨迹日志
-@property (assign, nonatomic) BOOL trackLogEnable;
-
 @end
 
 NS_ASSUME_NONNULL_END
