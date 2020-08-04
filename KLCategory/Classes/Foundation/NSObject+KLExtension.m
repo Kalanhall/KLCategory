@@ -10,7 +10,7 @@
 
 @interface KLObserverHelper : NSObject
 
-@property (unsafe_unretained, nonatomic) id object; // 当对象释放后仍指向该内存空间
+@property (weak  , nonatomic) id object; // 当对象释放后仍指向该内存空间,weak线程安全，自旋锁
 @property (strong, nonatomic) NSString *keyPath;
 @property (strong, nonatomic) void (^completion)(id value);
 
