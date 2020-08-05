@@ -7,73 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		056974AE581B1EBD93812E2691E4E61D /* UICollectionView+KLCellAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0796B7D060CF7B3E3403614FDF362F /* UICollectionView+KLCellAutoSize.m */; };
-		088142CB37400A0B2D564CC60986DDD6 /* KLCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A16358AB313DE296A18F77D314464E30 /* KLCategory-dummy.m */; };
+		04010962D14D8A913DD43399EC0B382F /* KLCategory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D33719A0C937D1BDD00C1FFA1FB478F /* KLCategory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041D57B9BA561D6286F15F9DB9F3CC20 /* UIColor+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 673FC8BC0454EE33D680DC773F923680 /* UIColor+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DBF9205F5B7FEF935CD8519472C74E4 /* UIButton+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5DA7E6F12C58A6710809F5A9E85E63 /* UIButton+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14447DDB20D4DC43F108E8B723530A1F /* NSTimer+KLExtentsion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA47363365783D8B890FCC093B44AA /* NSTimer+KLExtentsion.m */; };
+		18E7E3BBD2CA568EB0CB6ABAD441ADEA /* NSTimer+KLExtentsion.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9F84CE6FA0DAA0613DACA262F2F246 /* NSTimer+KLExtentsion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A0803B0427BC1CF47E144B33CD16BF1 /* UIButton+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E9E55BCC4EB2CBEE4A5824D3A8CDF4 /* UIButton+KLExtension.m */; };
 		2357D7F1DEEC1E47003393E1699E9DA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		237CBA0ADBB892919B9AD146B54CD458 /* Pods-KLCategory_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF88C7C0A1873D88C84D51D13332F00 /* Pods-KLCategory_Tests-dummy.m */; };
-		26749281267A626E3B7B5F39E4AF0F4F /* UIView+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC318E9C6CEA95CB7A78E68F3246C62 /* UIView+KLExtension.m */; };
+		24B80D1FB5980E2EE6F521545CAE48E1 /* UICollectionView+KLCellAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C1ADF7ECA3BFFE2CC7F97068C4B237 /* UICollectionView+KLCellAutoSize.m */; };
 		2CC11AD774FC015058CFD6DD48F802EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2EFEFF071B3AD9B2329E2B7152CA2A35 /* UIViewController+KLTrackLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A158B7C4D0E2D9F93EC92CADB0F35C1A /* UIViewController+KLTrackLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3163EB11181339B25E7160A26E04C07E /* UITextView+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B856B3595D7ADD301B476D88891920 /* UITextView+KLExtension.m */; };
 		3387CB92581072C9340F84C17F42259F /* UISplitViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5961C05CA89C101E902831F0A78F82 /* UISplitViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35241C6EBE3FB238647EE19219AAF300 /* Pods-KLCategory_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 644634C0A569F106B7827B0ED3DFF3AA /* Pods-KLCategory_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35DF01E18692874EB197651E265E6FCA /* KLRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B6C45FB25EBD65D6919205CC19EE53 /* KLRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37C5F7D0C1B5147908164201D6BE8F43 /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0DCE6EB37E902D30CE25FABE0CDDF1 /* UITabBarController+MemoryLeak.m */; };
+		38A9F1916DFB1C6B4AA09139481B22C1 /* UIDevice+KLUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 111FB7B0B9C7037491306D97BFBC15C0 /* UIDevice+KLUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A397614337370B6C687BE4BCA817BD0 /* UIView+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB48D605F59E3B22580208B32C7CBEE /* UIView+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F79ABDE6A3BFDF3871658B808A0D646 /* UIPageViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = E21BEE18410189F67E6E6A63893F1DC0 /* UIPageViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		420EB57E314BF6FB7E5A06C67958948F /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E2C9C8FC5317B778C9FFF9E7031109 /* UIViewController+MemoryLeak.m */; };
-		4406AF2CDDBF826DD72116074E799960 /* UIDevice+KLUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C492EC46405364863E8041D20F26B2 /* UIDevice+KLUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46145DFE160C94522304A5BA80F363E1 /* NSObject+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BF998E818517D26A70244078A52F7 /* NSObject+UIKit.m */; };
+		4A61574BA5ADC5AD506B1A62F3165B50 /* NSObject+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F8D10F2B18FE985B6494FE0C2D6920 /* NSObject+Foundation.m */; };
 		4C837AD2A623AEFBBF329831E4BE4025 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4E0FAD70AA15980D1370C1BE14138BA6 /* NSString+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F2ECD5E351897B84BF95A0AAAA326F /* NSString+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D2C5E911E973D04629B48E5FC7A32B2 /* UILabel+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A97E7C3B18D128D2BDA56D9D17E7425E /* UILabel+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E2CEF65A6ED6CD15ABA3281C3DF6220 /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF41C9FF4BEA6F6D95F26930069EFDB /* UIView+MemoryLeak.m */; };
-		4FB4408378C5DFC16CDE88EC68966693 /* UIViewController+KLTrackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D1154D3D00F29C73809001D10ADBBA7A /* UIViewController+KLTrackLog.m */; };
-		53A3064C6B1649D0AB6237D49A7E9CA2 /* UILabel+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 34626D5AF94A1C80089E3656883B23D8 /* UILabel+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CADC2780B130735644D253DF26B4F31 /* UIButton+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B9E7B93A02F91DE61222CD0CA6C983 /* UIButton+KLExtension.m */; };
-		5CB3FA4428153B00E0FE26CB7F4BE2AB /* NSObject+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C357DBC08672FB66B89FAD38D36473 /* NSObject+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62F656CAA08BB2673B2BAA045271C28E /* NSDate+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6E9FA32399055A797A1A992EAEF837 /* NSDate+KLExtension.m */; };
-		67DAC7F0752BDDC7E6E9699B796B1989 /* UITextView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 698BDF36964537B6B36B1491A2ACD582 /* UITextView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		689659F6A3CA2C3B842AD1FB70A98FC6 /* NSString+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E082F9BFD849CEAEB145962450D0D /* NSString+KLExtension.m */; };
+		526E65EB0906BD3F9A94A0549D581BB4 /* NSObject+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6F3EAAE9E123387EAE209E21DA3EFE /* NSObject+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546197305DA6F3D19D08D85D754C2B31 /* NSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EDD90F5D9D8923E74A0E4E9675DFA0A /* NSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E1E08532752315664028C1D8875AEA /* KLCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 77F1F5F568654A02EC595084291B6548 /* KLCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AF979DC142E3B573F1BB5EDBDEA4ECC /* NSString+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C544C3EC23023FF9C818112BDFE62 /* NSString+KLExtension.m */; };
+		614329EC0D396CEFFA9CE3F23DAB689B /* UILabel+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032002C77F73492B24C738A6E941C8B4 /* UILabel+KLExtension.m */; };
+		641C2889775216883425E90B301B8501 /* UIView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF73891A259160F57051F70887E8EE4 /* UIView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E545F092C996A161CCDF55F1F80261C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6EEB765C88382CAC0AD0728EAC37B896 /* UIImage+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0D00F83481E83C61D1EA032D8F2136 /* UIImage+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7414E08D63F4F61C9EEC605C487C6D61 /* NSObject+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4780784ECDEB3AE3B426C91E5DA31B75 /* NSObject+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7794AFD5F1F915A51672492DB6828D6A /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = D5421A7D875E59DB8B8A8F1847EE130E /* UISplitViewController+MemoryLeak.m */; };
 		78106BDB20B48046C3D7AEB2AE836042 /* KLLeaksMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C9F1733051EF327801557E29973ED4 /* KLLeaksMessenger.m */; };
-		7A59358CE3F94AD1D9F6C5BEE393ED70 /* UIColor+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 710B6A05DB686F1E178B7179DAC130C5 /* UIColor+KLExtension.m */; };
-		7E01355CCF8280D8493B878986C79C92 /* NSObject+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D6328AF24A0F3C715E6E66B6C050E76 /* NSObject+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		801EAD621DE6B6132A6A99D32E75F219 /* NSObject+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A995D395D0349B002A4EE80F95F2BEE1 /* NSObject+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83469207B7458AB412DC86DBB8A6C82E /* NSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC4D91BCA95114353FF58F124C9F5B5 /* NSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EDC1FCA05BAAF9105F42568AF34A24C /* NSObject+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DA802E9B94ABB3975CD52BC5A6F839 /* NSObject+UIKit.m */; };
+		8018567D8BA1F67456830D2E94D052FC /* NSDate+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A178223006BAB196EAF4542F95E29D /* NSDate+KLExtension.m */; };
+		87D005820B1992C7B730DDCCC3581704 /* KLRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B9FF2499251F848E09836DB8B047DF /* KLRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		884E553C125E7F016AFDB9E6379C3EFE /* UITextView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D7EB6F0055585762048CE5BA813E13 /* UITextView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90D2117F5B2324065EAF546F8937B633 /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DCDAC52B10C7829B1ACA63EE6C1DA8 /* NSObject+MemoryLeak.m */; };
-		972089EE000565E07AFA1210C9C13704 /* KLCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BD3CFCFEB2401C012D65622A3781BB0B /* KLCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90D56D7714440EE44FB953886118BBE2 /* UIColor+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15F6BC124626C247468F05AB895550 /* UIColor+KLExtension.m */; };
+		93758DC6678AE559D2D66F083C894106 /* NSDate+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FCDA091962668CB6F4996157FC3037AF /* NSDate+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4ADDA2679F3B8D2265440E3FD11DCE /* MLeaksFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D69B3AD0085C239B7EAD589DB5C53B /* MLeaksFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DA20CDB3A2C0D07431FFA601F5CA1F1 /* UICollectionView+KLCellAutoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 697C14B3E8F30013CAD71E892E2DB9DD /* UICollectionView+KLCellAutoSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E2A75CCCA273CF144E9B12FAB671AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9FCB5EBC12F79409898EDC841BA95309 /* NSObject+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0A2F736F8AEF332073E083F85E861 /* NSObject+Foundation.m */; };
+		9ED2001CDA79CE0D1367FDA39387F1A7 /* UIImage+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CC5847F933076D0039E5912794422 /* UIImage+KLExtension.m */; };
+		9F25CAC65C559CC2633A75C27260E98C /* UIView+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C5E71058C72A6BEBF870345C123BBB /* UIView+KLExtension.m */; };
 		A1079CC51296ADE8E0F5A3E48B9480FB /* KLLeaks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD0D91C3F2A92AD4129BECF6519EB98 /* KLLeaks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A130275BA4D75C78311BB2924EDFAA4C /* UIViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = B68DAE15A05F84C9592BCFC01DEA3C44 /* UIViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABC7FEB9A41FC9A3DECD5883763F328A /* UIDevice+KLUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C69221D324FEC7BFBEEC0A4519428 /* UIDevice+KLUUID.m */; };
-		B0F79987C7338F3515C6406F7D000FB3 /* UIButton+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 225869BF85B37144188D0C4C29C531B7 /* UIButton+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5270D9B48FFFE3C2ADAABEDBB89BA4E /* NSObject+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E785CB0FD0AFD54C3A33B143740B304E /* NSObject+KLExtension.m */; };
+		A5C6411B2305ACFD3830D153D1138DB6 /* NSString+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6475575C407EAAE015C98D22B0FDC35F /* NSString+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B322C065DE7812FC5E941DC3E20207F5 /* UITabBarController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 806F89CBC5E8AE5CDED156387C485311 /* UITabBarController+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4307E69A86486DF62DDDA89E9479645 /* UITextView+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AC2E5F997DF201E7C9165D32363B45 /* UITextView+KLExtension.m */; };
 		B791EEC7B47AE959ADF8D8308D989059 /* UITouch+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE50A8195EF9F0AC809E00E910A1713 /* UITouch+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8DB03A35ABF2C9FCC5F6A5BC8C220CB /* UIColor+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 803BB3F2D1B42C8A6A78BC5810303E1E /* UIColor+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8B77F16CCAE7E4BF6B8C9F0E3F48315 /* UICollectionView+KLCellAutoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = F8687E9EDD842A25B043D463A11D2227 /* UICollectionView+KLCellAutoSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF8DCDE149FBD30308336E4EFE45A92E /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 31906A1ED99D333A4A7C8A182B583A80 /* UIApplication+MemoryLeak.m */; };
 		C1D0479C10FDF7F5E999C7FCE3780715 /* Pods-KLCategory_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6660FC79999130F8E02C42ECA73F62 /* Pods-KLCategory_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C46483F25775683293CD405A7DBCF2F8 /* Pods-KLCategory_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B64F2D1B8E1F21FB1CBCBF8830D48 /* Pods-KLCategory_Example-dummy.m */; };
-		C5A4C929018BE66384DDD0D3839768A0 /* UILabel+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5008C80F5727760AE07B95C81F6FFB6E /* UILabel+KLExtension.m */; };
+		C5FBD6203ED4924C144B9C52FBB2FFE8 /* NSObject+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E759C0A9D17EDE4E7D8DA6997AA67E9E /* NSObject+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C73FB2BFB999BD05015C780E097A3AAA /* KLLeaksMessenger.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A59962B1C51326A04D41052EC3804EA /* KLLeaksMessenger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC62600D3843BDE04BC09F1397E1B14C /* UITouch+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CED97031B10B0E7BFC10FC9696D7F /* UITouch+MemoryLeak.m */; };
 		CEFBE632BB347F7672A56B6B195A9195 /* UINavigationController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 4412C05F86411C1420932672D7D0F521 /* UINavigationController+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF6629BA2AC10B19C0D9CE4DA876E827 /* KLCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E176C99EFDC5D87BFE70FA1904E95 /* KLCategory-dummy.m */; };
+		CFEA8628B8A466945886CCAC4654E450 /* UIDevice+KLUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DA638CEDEF823C8A05E107BDE94EF /* UIDevice+KLUUID.m */; };
 		D772A6B76BD93D48884D48D16B99753E /* KLLeakedObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 699BC0F00DEAAA7F4C8502B936F0FC00 /* KLLeakedObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D97A8AFE935F41ADA2D37B6243D64BF2 /* UIImage+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 56311081D7F6DF28D6BD31383A239339 /* UIImage+KLExtension.m */; };
 		DA1B4E06DE07E920F060FDD200CAD983 /* KLLeaks.h in Headers */ = {isa = PBXBuildFile; fileRef = C33C393C1300E56D4B6DEEE190C221F8 /* KLLeaks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA720511EF716653843510C570B81BD9 /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 71677D6737C894CCBB0429473A1BE18D /* UINavigationController+MemoryLeak.m */; };
-		DBE67F0967EC02A908D317C3B9FCAB77 /* UIImage+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 89458F8C07EB0BD7CC071F46ED279D8D /* UIImage+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE615F4752B6B340A491BACBAF56AC4A /* UIViewController+KLTrackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FC3D7EDF706676AF82D9FB147D2188 /* UIViewController+KLTrackLog.m */; };
 		E0AA6F92809D9A0EA38523315785ED8D /* KLLeakedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A62FA2019E41466CA8BC6312D14BB3E /* KLLeakedObjectProxy.m */; };
 		EB230CB75CB30ACB64E42BA5FA9797A7 /* UIApplication+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = F87D0D7CA10DEF063EDF368276DF02B5 /* UIApplication+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFFA67C1AAF45BAFEB73759D747F5E7A /* NSObject+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = ECBE7304F7B75092CBBBC352641CF211 /* NSObject+MemoryLeak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1B88E05C8906F05B070E2ED36DEE54D /* KLLeaks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E85C0BA211D71B6287F462BB982C88E6 /* KLLeaks-dummy.m */; };
 		F324A68895C422ACD9B8B91117DCA892 /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A4EF99507B2C2B780C8BE953C706BC /* UIPageViewController+MemoryLeak.m */; };
-		F49AF406225510F397DF7F5D75F95EAF /* UIView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C280987512795985097F8762CC4E617B /* UIView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F49CD786A4946AE3B0729CE3F377EA40 /* NSObject+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24365BEEA8D05070858B6C083C45D4C4 /* NSObject+KLExtension.m */; };
-		F613EA2290AFEC00F881CFC9B2D7AF15 /* KLCategory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD41F57137E8EF3230A34095F5D6AF84 /* KLCategory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F768592D34501FCE972BA724A476A37E /* NSDate+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A95352DC0239C85A2B625C1B5DEF195E /* NSDate+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCB493E6356090EB02037D5129D05790 /* UIViewController+KLTrackLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A8D3F55A6E841E00BCD3CD7C4FAAE224 /* UIViewController+KLTrackLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,98 +103,100 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032002C77F73492B24C738A6E941C8B4 /* UILabel+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KLExtension.m"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.m"; sourceTree = "<group>"; };
 		036B4F169FC0B8E5C4506A893CB332BF /* Pods-KLCategory_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCategory_Example-Info.plist"; sourceTree = "<group>"; };
-		06D1723F8A03FAF72E7BEEA87E7A98DC /* Pods_KLCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLCategory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C357DBC08672FB66B89FAD38D36473 /* NSObject+Foundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Foundation.h"; path = "KLCategory/Classes/Foundation/NSObject+Foundation.h"; sourceTree = "<group>"; };
-		0F18D10455141BE837F0ACB190967E1E /* KLCategory-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCategory-Info.plist"; sourceTree = "<group>"; };
+		043DBB9CD608BB21F33D7947BC4B4950 /* KLCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.release.xcconfig; sourceTree = "<group>"; };
+		06D1723F8A03FAF72E7BEEA87E7A98DC /* Pods_KLCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KLCategory_Tests.framework; path = "Pods-KLCategory_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DA802E9B94ABB3975CD52BC5A6F839 /* NSObject+UIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+UIKit.m"; path = "KLCategory/Classes/UIKit/NSObject+UIKit.m"; sourceTree = "<group>"; };
+		0A0D00F83481E83C61D1EA032D8F2136 /* UIImage+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.h"; sourceTree = "<group>"; };
+		111FB7B0B9C7037491306D97BFBC15C0 /* UIDevice+KLUUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+KLUUID.h"; path = "KLCategory/Classes/UIKit/UIDevice+KLUUID.h"; sourceTree = "<group>"; };
 		13DCDAC52B10C7829B1ACA63EE6C1DA8 /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MemoryLeak.m"; path = "KLLeaks/Classes/NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
-		16C492EC46405364863E8041D20F26B2 /* UIDevice+KLUUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+KLUUID.h"; path = "KLCategory/Classes/UIKit/UIDevice+KLUUID.h"; sourceTree = "<group>"; };
+		170CF839AE32E488E80918D3FE926B71 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		18D69B3AD0085C239B7EAD589DB5C53B /* MLeaksFinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLeaksFinder.h; path = KLLeaks/Classes/MLeaksFinder.h; sourceTree = "<group>"; };
-		18D92CD70ED5236205A749031D0D88DE /* KLCategory.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = KLCategory.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AB48D605F59E3B22580208B32C7CBEE /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MemoryLeak.h"; path = "KLLeaks/Classes/UIView+MemoryLeak.h"; sourceTree = "<group>"; };
-		1F0796B7D060CF7B3E3403614FDF362F /* UICollectionView+KLCellAutoSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+KLCellAutoSize.m"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.m"; sourceTree = "<group>"; };
-		1F9E42F1B6008395B35F93E06BC1883C /* KLCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.debug.xcconfig; sourceTree = "<group>"; };
-		1FC0A2F736F8AEF332073E083F85E861 /* NSObject+Foundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Foundation.m"; path = "KLCategory/Classes/Foundation/NSObject+Foundation.m"; sourceTree = "<group>"; };
-		20EEEF54685B81CD0666420346BD1517 /* KLCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KLCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		225869BF85B37144188D0C4C29C531B7 /* UIButton+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.h"; sourceTree = "<group>"; };
-		24365BEEA8D05070858B6C083C45D4C4 /* NSObject+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.m"; sourceTree = "<group>"; };
-		28F1CA2E9EFE1110596155BD5BFCD4DA /* Pods_KLCategory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLCategory_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20EEEF54685B81CD0666420346BD1517 /* KLCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLCategory.framework; path = KLCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F1CA2E9EFE1110596155BD5BFCD4DA /* Pods_KLCategory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KLCategory_Example.framework; path = "Pods-KLCategory_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE50A8195EF9F0AC809E00E910A1713 /* UITouch+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch+MemoryLeak.h"; path = "KLLeaks/Classes/UITouch+MemoryLeak.h"; sourceTree = "<group>"; };
-		3096580679A9238C4BDF66846EA5E224 /* KLLeaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KLLeaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3096580679A9238C4BDF66846EA5E224 /* KLLeaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLLeaks.framework; path = KLLeaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31906A1ED99D333A4A7C8A182B583A80 /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+MemoryLeak.m"; path = "KLLeaks/Classes/UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
+		31D7EB6F0055585762048CE5BA813E13 /* UITextView+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+KLExtension.h"; path = "KLCategory/Classes/UIKit/UITextView+KLExtension.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		34626D5AF94A1C80089E3656883B23D8 /* UILabel+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KLExtension.h"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.h"; sourceTree = "<group>"; };
-		37F2ECD5E351897B84BF95A0AAAA326F /* NSString+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.h"; sourceTree = "<group>"; };
-		3A0BF998E818517D26A70244078A52F7 /* NSObject+UIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+UIKit.m"; path = "KLCategory/Classes/UIKit/NSObject+UIKit.m"; sourceTree = "<group>"; };
-		3B1E2F3ACFA40F7181799ED73F8330E2 /* KLCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.release.xcconfig; sourceTree = "<group>"; };
-		3B6C5797F85D561CC91789D4E91DB5C4 /* KLCategory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCategory.modulemap; sourceTree = "<group>"; };
+		336DA638CEDEF823C8A05E107BDE94EF /* UIDevice+KLUUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+KLUUID.m"; path = "KLCategory/Classes/UIKit/UIDevice+KLUUID.m"; sourceTree = "<group>"; };
+		3BF73891A259160F57051F70887E8EE4 /* UIView+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIView+KLExtension.h"; sourceTree = "<group>"; };
 		4412C05F86411C1420932672D7D0F521 /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MemoryLeak.h"; path = "KLLeaks/Classes/UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
 		4569AA9883996F6A4EA00F0EEC463387 /* Pods-KLCategory_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCategory_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4780784ECDEB3AE3B426C91E5DA31B75 /* NSObject+Foundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Foundation.h"; path = "KLCategory/Classes/Foundation/NSObject+Foundation.h"; sourceTree = "<group>"; };
+		48B856B3595D7ADD301B476D88891920 /* UITextView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+KLExtension.m"; path = "KLCategory/Classes/UIKit/UITextView+KLExtension.m"; sourceTree = "<group>"; };
+		4B3CC5847F933076D0039E5912794422 /* UIImage+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.m"; sourceTree = "<group>"; };
 		4D7B5A12EBD5B5D79C708A5309C72ED8 /* Pods-KLCategory_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCategory_Tests-Info.plist"; sourceTree = "<group>"; };
-		4F45048F97846B0ED03E843F4FF668B0 /* KLCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-prefix.pch"; sourceTree = "<group>"; };
-		5008C80F5727760AE07B95C81F6FFB6E /* UILabel+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KLExtension.m"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.m"; sourceTree = "<group>"; };
 		56193A7B08F9341FAF9D1CF99404F3C2 /* Pods-KLCategory_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCategory_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		56311081D7F6DF28D6BD31383A239339 /* UIImage+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.m"; sourceTree = "<group>"; };
 		59F0C4BBB85B8852B38EDABABBAFD6B4 /* Pods-KLCategory_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCategory_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A59962B1C51326A04D41052EC3804EA /* KLLeaksMessenger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLLeaksMessenger.h; path = KLLeaks/Classes/KLLeaksMessenger.h; sourceTree = "<group>"; };
-		5C6E9FA32399055A797A1A992EAEF837 /* NSDate+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSDate+KLExtension.m"; sourceTree = "<group>"; };
+		5A6F3EAAE9E123387EAE209E21DA3EFE /* NSObject+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.h"; sourceTree = "<group>"; };
 		5CD0FC7D5E6F7E3BB9AEB544F12A200A /* KLLeaks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLLeaks-prefix.pch"; sourceTree = "<group>"; };
+		62A178223006BAB196EAF4542F95E29D /* NSDate+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSDate+KLExtension.m"; sourceTree = "<group>"; };
 		644634C0A569F106B7827B0ED3DFF3AA /* Pods-KLCategory_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KLCategory_Tests-umbrella.h"; sourceTree = "<group>"; };
-		697C14B3E8F30013CAD71E892E2DB9DD /* UICollectionView+KLCellAutoSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+KLCellAutoSize.h"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.h"; sourceTree = "<group>"; };
-		698BDF36964537B6B36B1491A2ACD582 /* UITextView+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+KLExtension.h"; path = "KLCategory/Classes/UIKit/UITextView+KLExtension.h"; sourceTree = "<group>"; };
+		6475575C407EAAE015C98D22B0FDC35F /* NSString+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.h"; sourceTree = "<group>"; };
+		673FC8BC0454EE33D680DC773F923680 /* UIColor+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIColor+KLExtension.h"; sourceTree = "<group>"; };
 		699BC0F00DEAAA7F4C8502B936F0FC00 /* KLLeakedObjectProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLLeakedObjectProxy.h; path = KLLeaks/Classes/KLLeakedObjectProxy.h; sourceTree = "<group>"; };
+		69E9E55BCC4EB2CBEE4A5824D3A8CDF4 /* UIButton+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.m"; sourceTree = "<group>"; };
+		6D33719A0C937D1BDD00C1FFA1FB478F /* KLCategory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-umbrella.h"; sourceTree = "<group>"; };
 		6D5961C05CA89C101E902831F0A78F82 /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISplitViewController+MemoryLeak.h"; path = "KLLeaks/Classes/UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
-		6DC4D91BCA95114353FF58F124C9F5B5 /* NSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSLogger.h; path = KLCategory/Classes/UIKit/NSLogger.h; sourceTree = "<group>"; };
 		6FD0D91C3F2A92AD4129BECF6519EB98 /* KLLeaks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLLeaks-umbrella.h"; sourceTree = "<group>"; };
 		70187673AA4FD8CFC67DAEFF81FF4AC4 /* Pods-KLCategory_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCategory_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		710B6A05DB686F1E178B7179DAC130C5 /* UIColor+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIColor+KLExtension.m"; sourceTree = "<group>"; };
 		71677D6737C894CCBB0429473A1BE18D /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MemoryLeak.m"; path = "KLLeaks/Classes/UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
 		7192C836E85F7EC194B9FB3025443A89 /* KLLeaks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLLeaks-Info.plist"; sourceTree = "<group>"; };
-		72AC2E5F997DF201E7C9165D32363B45 /* UITextView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+KLExtension.m"; path = "KLCategory/Classes/UIKit/UITextView+KLExtension.m"; sourceTree = "<group>"; };
-		7EC318E9C6CEA95CB7A78E68F3246C62 /* UIView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIView+KLExtension.m"; sourceTree = "<group>"; };
-		803BB3F2D1B42C8A6A78BC5810303E1E /* UIColor+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIColor+KLExtension.h"; sourceTree = "<group>"; };
+		743C07124F461E66E854EBB0883FB1A8 /* KLCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-prefix.pch"; sourceTree = "<group>"; };
+		77F1F5F568654A02EC595084291B6548 /* KLCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLCategory.h; path = KLCategory/Classes/KLCategory.h; sourceTree = "<group>"; };
+		7B17A2559EF4B77CB3815EB0CAF2CC97 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7D4C544C3EC23023FF9C818112BDFE62 /* NSString+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.m"; sourceTree = "<group>"; };
+		7EDD90F5D9D8923E74A0E4E9675DFA0A /* NSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSLogger.h; path = KLCategory/Classes/UIKit/NSLogger.h; sourceTree = "<group>"; };
 		806F89CBC5E8AE5CDED156387C485311 /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBarController+MemoryLeak.h"; path = "KLLeaks/Classes/UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
-		83C198FE987AC89E1573B46AF042EDB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		85B6C45FB25EBD65D6919205CC19EE53 /* KLRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLRuntime.h; path = KLCategory/Classes/UIKit/KLRuntime.h; sourceTree = "<group>"; };
-		89458F8C07EB0BD7CC071F46ED279D8D /* UIImage+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIImage+KLExtension.h"; sourceTree = "<group>"; };
 		8A62FA2019E41466CA8BC6312D14BB3E /* KLLeakedObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLLeakedObjectProxy.m; path = KLLeaks/Classes/KLLeakedObjectProxy.m; sourceTree = "<group>"; };
-		8C5E082F9BFD849CEAEB145962450D0D /* NSString+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSString+KLExtension.m"; sourceTree = "<group>"; };
-		9D6328AF24A0F3C715E6E66B6C050E76 /* NSObject+UIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+UIKit.h"; path = "KLCategory/Classes/UIKit/NSObject+UIKit.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8DBA47363365783D8B890FCC093B44AA /* NSTimer+KLExtentsion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+KLExtentsion.m"; path = "KLCategory/Classes/Foundation/NSTimer+KLExtentsion.m"; sourceTree = "<group>"; };
+		8E5DA7E6F12C58A6710809F5A9E85E63 /* UIButton+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.h"; sourceTree = "<group>"; };
+		94ECA1D8FCF28099DEF7CFCF7086FB7F /* KLCategory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCategory.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E4258C97F7A454CF9D704B658254B7F /* Pods-KLCategory_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCategory_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A158B7C4D0E2D9F93EC92CADB0F35C1A /* UIViewController+KLTrackLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KLTrackLog.h"; path = "KLCategory/Classes/UIKit/UIViewController+KLTrackLog.h"; sourceTree = "<group>"; };
-		A16358AB313DE296A18F77D314464E30 /* KLCategory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLCategory-dummy.m"; sourceTree = "<group>"; };
+		A0F8D10F2B18FE985B6494FE0C2D6920 /* NSObject+Foundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Foundation.m"; path = "KLCategory/Classes/Foundation/NSObject+Foundation.m"; sourceTree = "<group>"; };
 		A2C9F1733051EF327801557E29973ED4 /* KLLeaksMessenger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLLeaksMessenger.m; path = KLLeaks/Classes/KLLeaksMessenger.m; sourceTree = "<group>"; };
-		A95352DC0239C85A2B625C1B5DEF195E /* NSDate+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSDate+KLExtension.h"; sourceTree = "<group>"; };
-		A995D395D0349B002A4EE80F95F2BEE1 /* NSObject+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.h"; sourceTree = "<group>"; };
+		A4C5E71058C72A6BEBF870345C123BBB /* UIView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIView+KLExtension.m"; sourceTree = "<group>"; };
+		A8D3F55A6E841E00BCD3CD7C4FAAE224 /* UIViewController+KLTrackLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KLTrackLog.h"; path = "KLCategory/Classes/UIKit/UIViewController+KLTrackLog.h"; sourceTree = "<group>"; };
+		A97E7C3B18D128D2BDA56D9D17E7425E /* UILabel+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KLExtension.h"; path = "KLCategory/Classes/UIKit/UILabel+KLExtension.h"; sourceTree = "<group>"; };
 		ABE7D5171418CD139C13D3CED7020835 /* KLLeaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLLeaks.release.xcconfig; sourceTree = "<group>"; };
 		ABF41C9FF4BEA6F6D95F26930069EFDB /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MemoryLeak.m"; path = "KLLeaks/Classes/UIView+MemoryLeak.m"; sourceTree = "<group>"; };
 		ACF88C7C0A1873D88C84D51D13332F00 /* Pods-KLCategory_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLCategory_Tests-dummy.m"; sourceTree = "<group>"; };
 		AF0DCE6EB37E902D30CE25FABE0CDDF1 /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBarController+MemoryLeak.m"; path = "KLLeaks/Classes/UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
-		B0B9E7B93A02F91DE61222CD0CA6C983 /* UIButton+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIButton+KLExtension.m"; sourceTree = "<group>"; };
+		B1C1ADF7ECA3BFFE2CC7F97068C4B237 /* UICollectionView+KLCellAutoSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+KLCellAutoSize.m"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.m"; sourceTree = "<group>"; };
 		B66B64F2D1B8E1F21FB1CBCBF8830D48 /* Pods-KLCategory_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLCategory_Example-dummy.m"; sourceTree = "<group>"; };
 		B68DAE15A05F84C9592BCFC01DEA3C44 /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MemoryLeak.h"; path = "KLLeaks/Classes/UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
-		B6B8B1F06754DBC4F678F06DC2E5AA7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BD3CFCFEB2401C012D65622A3781BB0B /* KLCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLCategory.h; path = KLCategory/Classes/KLCategory.h; sourceTree = "<group>"; };
+		B8B9FF2499251F848E09836DB8B047DF /* KLRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLRuntime.h; path = KLCategory/Classes/UIKit/KLRuntime.h; sourceTree = "<group>"; };
+		BC15F6BC124626C247468F05AB895550 /* UIColor+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KLExtension.m"; path = "KLCategory/Classes/UIKit/UIColor+KLExtension.m"; sourceTree = "<group>"; };
 		BF88537FA07BF835AD7C0C9B80D7A849 /* Pods-KLCategory_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCategory_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BF9F84CE6FA0DAA0613DACA262F2F246 /* NSTimer+KLExtentsion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+KLExtentsion.h"; path = "KLCategory/Classes/Foundation/NSTimer+KLExtentsion.h"; sourceTree = "<group>"; };
 		C13CED97031B10B0E7BFC10FC9696D7F /* UITouch+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch+MemoryLeak.m"; path = "KLLeaks/Classes/UITouch+MemoryLeak.m"; sourceTree = "<group>"; };
-		C280987512795985097F8762CC4E617B /* UIView+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KLExtension.h"; path = "KLCategory/Classes/UIKit/UIView+KLExtension.h"; sourceTree = "<group>"; };
 		C33C393C1300E56D4B6DEEE190C221F8 /* KLLeaks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLLeaks.h; path = KLLeaks/Classes/KLLeaks.h; sourceTree = "<group>"; };
-		CC3C69221D324FEC7BFBEEC0A4519428 /* UIDevice+KLUUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+KLUUID.m"; path = "KLCategory/Classes/UIKit/UIDevice+KLUUID.m"; sourceTree = "<group>"; };
-		CD41F57137E8EF3230A34095F5D6AF84 /* KLCategory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-umbrella.h"; sourceTree = "<group>"; };
 		CF22333B84D6BD74D66CD84C445D0485 /* KLLeaks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLLeaks.modulemap; sourceTree = "<group>"; };
 		CF4B40A51F71AB0A7BE3CF794A85DD17 /* Pods-KLCategory_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KLCategory_Tests.modulemap"; sourceTree = "<group>"; };
-		D1154D3D00F29C73809001D10ADBBA7A /* UIViewController+KLTrackLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KLTrackLog.m"; path = "KLCategory/Classes/UIKit/UIViewController+KLTrackLog.m"; sourceTree = "<group>"; };
+		D3068E660885A107B8EC5B253A10A6E6 /* KLCategory-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCategory-Info.plist"; sourceTree = "<group>"; };
+		D4FC3D7EDF706676AF82D9FB147D2188 /* UIViewController+KLTrackLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KLTrackLog.m"; path = "KLCategory/Classes/UIKit/UIViewController+KLTrackLog.m"; sourceTree = "<group>"; };
+		D52D2FF454817CF226516817ADD286D1 /* KLCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.debug.xcconfig; sourceTree = "<group>"; };
 		D5421A7D875E59DB8B8A8F1847EE130E /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+MemoryLeak.m"; path = "KLLeaks/Classes/UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		D87E176C99EFDC5D87BFE70FA1904E95 /* KLCategory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLCategory-dummy.m"; sourceTree = "<group>"; };
 		D89018BA4BE73B0EE7D645FC374F01F5 /* Pods-KLCategory_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KLCategory_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E086626053F08926DFDD1961D4EA973F /* KLCategory.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KLCategory.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E21BEE18410189F67E6E6A63893F1DC0 /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPageViewController+MemoryLeak.h"; path = "KLLeaks/Classes/UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
 		E3E2C9C8FC5317B778C9FFF9E7031109 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MemoryLeak.m"; path = "KLLeaks/Classes/UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		E759C0A9D17EDE4E7D8DA6997AA67E9E /* NSObject+UIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+UIKit.h"; path = "KLCategory/Classes/UIKit/NSObject+UIKit.h"; sourceTree = "<group>"; };
+		E785CB0FD0AFD54C3A33B143740B304E /* NSObject+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLExtension.m"; path = "KLCategory/Classes/Foundation/NSObject+KLExtension.m"; sourceTree = "<group>"; };
 		E85C0BA211D71B6287F462BB982C88E6 /* KLLeaks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLLeaks-dummy.m"; sourceTree = "<group>"; };
 		E8BC0450C71A4864648D8CE62EA8A4BB /* Pods-KLCategory_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KLCategory_Example.modulemap"; sourceTree = "<group>"; };
 		ECBE7304F7B75092CBBBC352641CF211 /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MemoryLeak.h"; path = "KLLeaks/Classes/NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
 		F6DA5D853BFEE3C4D86A099105229ED7 /* Pods-KLCategory_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KLCategory_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F8687E9EDD842A25B043D463A11D2227 /* UICollectionView+KLCellAutoSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+KLCellAutoSize.h"; path = "KLCategory/Classes/UIKit/UICollectionView+KLCellAutoSize.h"; sourceTree = "<group>"; };
 		F87D0D7CA10DEF063EDF368276DF02B5 /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+MemoryLeak.h"; path = "KLLeaks/Classes/UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
 		F8A4EF99507B2C2B780C8BE953C706BC /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIPageViewController+MemoryLeak.m"; path = "KLLeaks/Classes/UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		FCDA091962668CB6F4996157FC3037AF /* NSDate+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+KLExtension.h"; path = "KLCategory/Classes/Foundation/NSDate+KLExtension.h"; sourceTree = "<group>"; };
 		FD6660FC79999130F8E02C42ECA73F62 /* Pods-KLCategory_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KLCategory_Example-umbrella.h"; sourceTree = "<group>"; };
 		FDBA074F2A2D95639EEC5E99D5F48A1D /* Pods-KLCategory_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KLCategory_Example-frameworks.sh"; sourceTree = "<group>"; };
 		FEA292F5E68A24410F1EA5BCEE27DFDD /* KLLeaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLLeaks.debug.xcconfig; sourceTree = "<group>"; };
@@ -223,32 +227,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF3DB82998646CC8A37328DF6870B592 /* Frameworks */ = {
+		9F68D4CE900C14D4C657747D4A8DE5DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E2A75CCCA273CF144E9B12FAB671AD1 /* Foundation.framework in Frameworks */,
+				6E545F092C996A161CCDF55F1F80261C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06E55CA6C698DB58494FD3CAA2903912 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B6C5797F85D561CC91789D4E91DB5C4 /* KLCategory.modulemap */,
-				A16358AB313DE296A18F77D314464E30 /* KLCategory-dummy.m */,
-				0F18D10455141BE837F0ACB190967E1E /* KLCategory-Info.plist */,
-				4F45048F97846B0ED03E843F4FF668B0 /* KLCategory-prefix.pch */,
-				CD41F57137E8EF3230A34095F5D6AF84 /* KLCategory-umbrella.h */,
-				1F9E42F1B6008395B35F93E06BC1883C /* KLCategory.debug.xcconfig */,
-				3B1E2F3ACFA40F7181799ED73F8330E2 /* KLCategory.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/KLCategory";
-			sourceTree = "<group>";
-		};
 		0C6ABE0BB87A9FB8CF354CA743E1FE17 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,38 +250,26 @@
 		0E3E234D1A4C4A2304475A3F4F502D76 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				82A589D6267DD68AC1215C5CDD92F9AC /* KLCategory */,
+				B7D9B662FD3F5972E4B011DA563B13C1 /* KLCategory */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		1CCB7A20C162AADDDE978086F3AAF2EA /* UIKit */ = {
+		2564EDB869933A473CB9FFF38380BCA5 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				85B6C45FB25EBD65D6919205CC19EE53 /* KLRuntime.h */,
-				6DC4D91BCA95114353FF58F124C9F5B5 /* NSLogger.h */,
-				9D6328AF24A0F3C715E6E66B6C050E76 /* NSObject+UIKit.h */,
-				3A0BF998E818517D26A70244078A52F7 /* NSObject+UIKit.m */,
-				225869BF85B37144188D0C4C29C531B7 /* UIButton+KLExtension.h */,
-				B0B9E7B93A02F91DE61222CD0CA6C983 /* UIButton+KLExtension.m */,
-				697C14B3E8F30013CAD71E892E2DB9DD /* UICollectionView+KLCellAutoSize.h */,
-				1F0796B7D060CF7B3E3403614FDF362F /* UICollectionView+KLCellAutoSize.m */,
-				803BB3F2D1B42C8A6A78BC5810303E1E /* UIColor+KLExtension.h */,
-				710B6A05DB686F1E178B7179DAC130C5 /* UIColor+KLExtension.m */,
-				16C492EC46405364863E8041D20F26B2 /* UIDevice+KLUUID.h */,
-				CC3C69221D324FEC7BFBEEC0A4519428 /* UIDevice+KLUUID.m */,
-				89458F8C07EB0BD7CC071F46ED279D8D /* UIImage+KLExtension.h */,
-				56311081D7F6DF28D6BD31383A239339 /* UIImage+KLExtension.m */,
-				34626D5AF94A1C80089E3656883B23D8 /* UILabel+KLExtension.h */,
-				5008C80F5727760AE07B95C81F6FFB6E /* UILabel+KLExtension.m */,
-				698BDF36964537B6B36B1491A2ACD582 /* UITextView+KLExtension.h */,
-				72AC2E5F997DF201E7C9165D32363B45 /* UITextView+KLExtension.m */,
-				C280987512795985097F8762CC4E617B /* UIView+KLExtension.h */,
-				7EC318E9C6CEA95CB7A78E68F3246C62 /* UIView+KLExtension.m */,
-				A158B7C4D0E2D9F93EC92CADB0F35C1A /* UIViewController+KLTrackLog.h */,
-				D1154D3D00F29C73809001D10ADBBA7A /* UIViewController+KLTrackLog.m */,
+				FCDA091962668CB6F4996157FC3037AF /* NSDate+KLExtension.h */,
+				62A178223006BAB196EAF4542F95E29D /* NSDate+KLExtension.m */,
+				4780784ECDEB3AE3B426C91E5DA31B75 /* NSObject+Foundation.h */,
+				A0F8D10F2B18FE985B6494FE0C2D6920 /* NSObject+Foundation.m */,
+				5A6F3EAAE9E123387EAE209E21DA3EFE /* NSObject+KLExtension.h */,
+				E785CB0FD0AFD54C3A33B143740B304E /* NSObject+KLExtension.m */,
+				6475575C407EAAE015C98D22B0FDC35F /* NSString+KLExtension.h */,
+				7D4C544C3EC23023FF9C818112BDFE62 /* NSString+KLExtension.m */,
+				BF9F84CE6FA0DAA0613DACA262F2F246 /* NSTimer+KLExtentsion.h */,
+				8DBA47363365783D8B890FCC093B44AA /* NSTimer+KLExtentsion.m */,
 			);
-			name = UIKit;
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 		352C7FE6D28125EAB20D3DBB1C88F518 /* Pods-KLCategory_Tests */ = {
@@ -328,32 +305,19 @@
 			path = "Target Support Files/Pods-KLCategory_Example";
 			sourceTree = "<group>";
 		};
-		6C909EF3FF13E13BB6EB3A60020215E1 /* Foundation */ = {
+		694648510749303E2A0DD0B18C9C2D21 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A95352DC0239C85A2B625C1B5DEF195E /* NSDate+KLExtension.h */,
-				5C6E9FA32399055A797A1A992EAEF837 /* NSDate+KLExtension.m */,
-				09C357DBC08672FB66B89FAD38D36473 /* NSObject+Foundation.h */,
-				1FC0A2F736F8AEF332073E083F85E861 /* NSObject+Foundation.m */,
-				A995D395D0349B002A4EE80F95F2BEE1 /* NSObject+KLExtension.h */,
-				24365BEEA8D05070858B6C083C45D4C4 /* NSObject+KLExtension.m */,
-				37F2ECD5E351897B84BF95A0AAAA326F /* NSString+KLExtension.h */,
-				8C5E082F9BFD849CEAEB145962450D0D /* NSString+KLExtension.m */,
+				94ECA1D8FCF28099DEF7CFCF7086FB7F /* KLCategory.modulemap */,
+				D87E176C99EFDC5D87BFE70FA1904E95 /* KLCategory-dummy.m */,
+				D3068E660885A107B8EC5B253A10A6E6 /* KLCategory-Info.plist */,
+				743C07124F461E66E854EBB0883FB1A8 /* KLCategory-prefix.pch */,
+				6D33719A0C937D1BDD00C1FFA1FB478F /* KLCategory-umbrella.h */,
+				D52D2FF454817CF226516817ADD286D1 /* KLCategory.debug.xcconfig */,
+				043DBB9CD608BB21F33D7947BC4B4950 /* KLCategory.release.xcconfig */,
 			);
-			name = Foundation;
-			sourceTree = "<group>";
-		};
-		82A589D6267DD68AC1215C5CDD92F9AC /* KLCategory */ = {
-			isa = PBXGroup;
-			children = (
-				BD3CFCFEB2401C012D65622A3781BB0B /* KLCategory.h */,
-				6C909EF3FF13E13BB6EB3A60020215E1 /* Foundation */,
-				9CD8C6319AE952E16064412C5B8BC6F2 /* Pod */,
-				06E55CA6C698DB58494FD3CAA2903912 /* Support Files */,
-				1CCB7A20C162AADDDE978086F3AAF2EA /* UIKit */,
-			);
-			name = KLCategory;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KLCategory";
 			sourceTree = "<group>";
 		};
 		9B6A3D1D4120A422EE202360056AA20A /* Support Files */ = {
@@ -371,12 +335,25 @@
 			path = "../Target Support Files/KLLeaks";
 			sourceTree = "<group>";
 		};
-		9CD8C6319AE952E16064412C5B8BC6F2 /* Pod */ = {
+		B7D9B662FD3F5972E4B011DA563B13C1 /* KLCategory */ = {
 			isa = PBXGroup;
 			children = (
-				18D92CD70ED5236205A749031D0D88DE /* KLCategory.podspec */,
-				83C198FE987AC89E1573B46AF042EDB9 /* LICENSE */,
-				B6B8B1F06754DBC4F678F06DC2E5AA7B /* README.md */,
+				77F1F5F568654A02EC595084291B6548 /* KLCategory.h */,
+				2564EDB869933A473CB9FFF38380BCA5 /* Foundation */,
+				BFB8218A2C7D18A26AB8247CA8CF2DD1 /* Pod */,
+				694648510749303E2A0DD0B18C9C2D21 /* Support Files */,
+				D2C177D4895F645FA23B2395B8F207E3 /* UIKit */,
+			);
+			name = KLCategory;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BFB8218A2C7D18A26AB8247CA8CF2DD1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E086626053F08926DFDD1961D4EA973F /* KLCategory.podspec */,
+				170CF839AE32E488E80918D3FE926B71 /* LICENSE */,
+				7B17A2559EF4B77CB3815EB0CAF2CC97 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -420,6 +397,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D2C177D4895F645FA23B2395B8F207E3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B8B9FF2499251F848E09836DB8B047DF /* KLRuntime.h */,
+				7EDD90F5D9D8923E74A0E4E9675DFA0A /* NSLogger.h */,
+				E759C0A9D17EDE4E7D8DA6997AA67E9E /* NSObject+UIKit.h */,
+				09DA802E9B94ABB3975CD52BC5A6F839 /* NSObject+UIKit.m */,
+				8E5DA7E6F12C58A6710809F5A9E85E63 /* UIButton+KLExtension.h */,
+				69E9E55BCC4EB2CBEE4A5824D3A8CDF4 /* UIButton+KLExtension.m */,
+				F8687E9EDD842A25B043D463A11D2227 /* UICollectionView+KLCellAutoSize.h */,
+				B1C1ADF7ECA3BFFE2CC7F97068C4B237 /* UICollectionView+KLCellAutoSize.m */,
+				673FC8BC0454EE33D680DC773F923680 /* UIColor+KLExtension.h */,
+				BC15F6BC124626C247468F05AB895550 /* UIColor+KLExtension.m */,
+				111FB7B0B9C7037491306D97BFBC15C0 /* UIDevice+KLUUID.h */,
+				336DA638CEDEF823C8A05E107BDE94EF /* UIDevice+KLUUID.m */,
+				0A0D00F83481E83C61D1EA032D8F2136 /* UIImage+KLExtension.h */,
+				4B3CC5847F933076D0039E5912794422 /* UIImage+KLExtension.m */,
+				A97E7C3B18D128D2BDA56D9D17E7425E /* UILabel+KLExtension.h */,
+				032002C77F73492B24C738A6E941C8B4 /* UILabel+KLExtension.m */,
+				31D7EB6F0055585762048CE5BA813E13 /* UITextView+KLExtension.h */,
+				48B856B3595D7ADD301B476D88891920 /* UITextView+KLExtension.m */,
+				3BF73891A259160F57051F70887E8EE4 /* UIView+KLExtension.h */,
+				A4C5E71058C72A6BEBF870345C123BBB /* UIView+KLExtension.m */,
+				A8D3F55A6E841E00BCD3CD7C4FAAE224 /* UIViewController+KLTrackLog.h */,
+				D4FC3D7EDF706676AF82D9FB147D2188 /* UIViewController+KLTrackLog.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		D3B06D322608442CF5411C27E69AE410 /* KLLeaks */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +455,7 @@
 				E3E2C9C8FC5317B778C9FFF9E7031109 /* UIViewController+MemoryLeak.m */,
 				9B6A3D1D4120A422EE202360056AA20A /* Support Files */,
 			);
+			name = KLLeaks;
 			path = KLLeaks;
 			sourceTree = "<group>";
 		};
@@ -463,6 +470,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		152CFDE2665534016EE0C555CE40ED1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04010962D14D8A913DD43399EC0B382F /* KLCategory-umbrella.h in Headers */,
+				59E1E08532752315664028C1D8875AEA /* KLCategory.h in Headers */,
+				87D005820B1992C7B730DDCCC3581704 /* KLRuntime.h in Headers */,
+				93758DC6678AE559D2D66F083C894106 /* NSDate+KLExtension.h in Headers */,
+				546197305DA6F3D19D08D85D754C2B31 /* NSLogger.h in Headers */,
+				7414E08D63F4F61C9EEC605C487C6D61 /* NSObject+Foundation.h in Headers */,
+				526E65EB0906BD3F9A94A0549D581BB4 /* NSObject+KLExtension.h in Headers */,
+				C5FBD6203ED4924C144B9C52FBB2FFE8 /* NSObject+UIKit.h in Headers */,
+				A5C6411B2305ACFD3830D153D1138DB6 /* NSString+KLExtension.h in Headers */,
+				18E7E3BBD2CA568EB0CB6ABAD441ADEA /* NSTimer+KLExtentsion.h in Headers */,
+				0DBF9205F5B7FEF935CD8519472C74E4 /* UIButton+KLExtension.h in Headers */,
+				B8B77F16CCAE7E4BF6B8C9F0E3F48315 /* UICollectionView+KLCellAutoSize.h in Headers */,
+				041D57B9BA561D6286F15F9DB9F3CC20 /* UIColor+KLExtension.h in Headers */,
+				38A9F1916DFB1C6B4AA09139481B22C1 /* UIDevice+KLUUID.h in Headers */,
+				6EEB765C88382CAC0AD0728EAC37B896 /* UIImage+KLExtension.h in Headers */,
+				4D2C5E911E973D04629B48E5FC7A32B2 /* UILabel+KLExtension.h in Headers */,
+				884E553C125E7F016AFDB9E6379C3EFE /* UITextView+KLExtension.h in Headers */,
+				641C2889775216883425E90B301B8501 /* UIView+KLExtension.h in Headers */,
+				FCB493E6356090EB02037D5129D05790 /* UIViewController+KLTrackLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7883AB8659712676DE61D170487A5831 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,31 +530,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1D0479C10FDF7F5E999C7FCE3780715 /* Pods-KLCategory_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F99D365993F17191365CE81F1266CA0E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F613EA2290AFEC00F881CFC9B2D7AF15 /* KLCategory-umbrella.h in Headers */,
-				972089EE000565E07AFA1210C9C13704 /* KLCategory.h in Headers */,
-				35DF01E18692874EB197651E265E6FCA /* KLRuntime.h in Headers */,
-				F768592D34501FCE972BA724A476A37E /* NSDate+KLExtension.h in Headers */,
-				83469207B7458AB412DC86DBB8A6C82E /* NSLogger.h in Headers */,
-				5CB3FA4428153B00E0FE26CB7F4BE2AB /* NSObject+Foundation.h in Headers */,
-				801EAD621DE6B6132A6A99D32E75F219 /* NSObject+KLExtension.h in Headers */,
-				7E01355CCF8280D8493B878986C79C92 /* NSObject+UIKit.h in Headers */,
-				4E0FAD70AA15980D1370C1BE14138BA6 /* NSString+KLExtension.h in Headers */,
-				B0F79987C7338F3515C6406F7D000FB3 /* UIButton+KLExtension.h in Headers */,
-				9DA20CDB3A2C0D07431FFA601F5CA1F1 /* UICollectionView+KLCellAutoSize.h in Headers */,
-				B8DB03A35ABF2C9FCC5F6A5BC8C220CB /* UIColor+KLExtension.h in Headers */,
-				4406AF2CDDBF826DD72116074E799960 /* UIDevice+KLUUID.h in Headers */,
-				DBE67F0967EC02A908D317C3B9FCAB77 /* UIImage+KLExtension.h in Headers */,
-				53A3064C6B1649D0AB6237D49A7E9CA2 /* UILabel+KLExtension.h in Headers */,
-				67DAC7F0752BDDC7E6E9699B796B1989 /* UITextView+KLExtension.h in Headers */,
-				F49AF406225510F397DF7F5D75F95EAF /* UIView+KLExtension.h in Headers */,
-				2EFEFF071B3AD9B2329E2B7152CA2A35 /* UIViewController+KLTrackLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,12 +577,12 @@
 		};
 		BCFF1723DAF5C11A8128CBE09DB0A05A /* KLCategory */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A4B4FA5E4F55415631438A5EFC89F43 /* Build configuration list for PBXNativeTarget "KLCategory" */;
+			buildConfigurationList = 1F78A9C9ED062058A6F512E91795C564 /* Build configuration list for PBXNativeTarget "KLCategory" */;
 			buildPhases = (
-				F99D365993F17191365CE81F1266CA0E /* Headers */,
-				9EA7FE76E21AE4F69B50449352FC36E5 /* Sources */,
-				FF3DB82998646CC8A37328DF6870B592 /* Frameworks */,
-				DA7F591193F14909DFA5B963ED3A9F58 /* Resources */,
+				152CFDE2665534016EE0C555CE40ED1B /* Headers */,
+				5D103508B9AFEBF3925B62DA63D58C4E /* Sources */,
+				9F68D4CE900C14D4C657747D4A8DE5DF /* Frameworks */,
+				25633D68A1D2865CF445730B7D0F30F2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -634,6 +642,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25633D68A1D2865CF445730B7D0F30F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		600C3B1782C94F8744BD6D26AA8771CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,13 +664,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8F5FC1885014F1614DA5154A233458F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA7F591193F14909DFA5B963ED3A9F58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -684,33 +692,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D103508B9AFEBF3925B62DA63D58C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6629BA2AC10B19C0D9CE4DA876E827 /* KLCategory-dummy.m in Sources */,
+				8018567D8BA1F67456830D2E94D052FC /* NSDate+KLExtension.m in Sources */,
+				4A61574BA5ADC5AD506B1A62F3165B50 /* NSObject+Foundation.m in Sources */,
+				A5270D9B48FFFE3C2ADAABEDBB89BA4E /* NSObject+KLExtension.m in Sources */,
+				7EDC1FCA05BAAF9105F42568AF34A24C /* NSObject+UIKit.m in Sources */,
+				5AF979DC142E3B573F1BB5EDBDEA4ECC /* NSString+KLExtension.m in Sources */,
+				14447DDB20D4DC43F108E8B723530A1F /* NSTimer+KLExtentsion.m in Sources */,
+				1A0803B0427BC1CF47E144B33CD16BF1 /* UIButton+KLExtension.m in Sources */,
+				24B80D1FB5980E2EE6F521545CAE48E1 /* UICollectionView+KLCellAutoSize.m in Sources */,
+				90D56D7714440EE44FB953886118BBE2 /* UIColor+KLExtension.m in Sources */,
+				CFEA8628B8A466945886CCAC4654E450 /* UIDevice+KLUUID.m in Sources */,
+				9ED2001CDA79CE0D1367FDA39387F1A7 /* UIImage+KLExtension.m in Sources */,
+				614329EC0D396CEFFA9CE3F23DAB689B /* UILabel+KLExtension.m in Sources */,
+				3163EB11181339B25E7160A26E04C07E /* UITextView+KLExtension.m in Sources */,
+				9F25CAC65C559CC2633A75C27260E98C /* UIView+KLExtension.m in Sources */,
+				DE615F4752B6B340A491BACBAF56AC4A /* UIViewController+KLTrackLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B279FD9DBEF5EDD78C1D1B44CF4D459 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C46483F25775683293CD405A7DBCF2F8 /* Pods-KLCategory_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EA7FE76E21AE4F69B50449352FC36E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088142CB37400A0B2D564CC60986DDD6 /* KLCategory-dummy.m in Sources */,
-				62F656CAA08BB2673B2BAA045271C28E /* NSDate+KLExtension.m in Sources */,
-				9FCB5EBC12F79409898EDC841BA95309 /* NSObject+Foundation.m in Sources */,
-				F49CD786A4946AE3B0729CE3F377EA40 /* NSObject+KLExtension.m in Sources */,
-				46145DFE160C94522304A5BA80F363E1 /* NSObject+UIKit.m in Sources */,
-				689659F6A3CA2C3B842AD1FB70A98FC6 /* NSString+KLExtension.m in Sources */,
-				5CADC2780B130735644D253DF26B4F31 /* UIButton+KLExtension.m in Sources */,
-				056974AE581B1EBD93812E2691E4E61D /* UICollectionView+KLCellAutoSize.m in Sources */,
-				7A59358CE3F94AD1D9F6C5BEE393ED70 /* UIColor+KLExtension.m in Sources */,
-				ABC7FEB9A41FC9A3DECD5883763F328A /* UIDevice+KLUUID.m in Sources */,
-				D97A8AFE935F41ADA2D37B6243D64BF2 /* UIImage+KLExtension.m in Sources */,
-				C5A4C929018BE66384DDD0D3839768A0 /* UILabel+KLExtension.m in Sources */,
-				B4307E69A86486DF62DDDA89E9479645 /* UITextView+KLExtension.m in Sources */,
-				26749281267A626E3B7B5F39E4AF0F4F /* UIView+KLExtension.m in Sources */,
-				4FB4408378C5DFC16CDE88EC68966693 /* UIViewController+KLTrackLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +971,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1032,6 +1042,37 @@
 			};
 			name = Debug;
 		};
+		9E28D0D272244325F61D24DA31CDE457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D52D2FF454817CF226516817ADD286D1 /* KLCategory.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KLCategory/KLCategory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KLCategory/KLCategory-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KLCategory/KLCategory.modulemap";
+				PRODUCT_MODULE_NAME = KLCategory;
+				PRODUCT_NAME = KLCategory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		AD426DF5506CBF9B55AC226D0372E1A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF88537FA07BF835AD7C0C9B80D7A849 /* Pods-KLCategory_Example.release.xcconfig */;
@@ -1066,40 +1107,9 @@
 			};
 			name = Release;
 		};
-		B05667F4C67525731F89DDAD26472267 /* Debug */ = {
+		D5C07C6A31659E8A39042B224AA7C5EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F9E42F1B6008395B35F93E06BC1883C /* KLCategory.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KLCategory/KLCategory-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KLCategory/KLCategory-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KLCategory/KLCategory.modulemap";
-				PRODUCT_MODULE_NAME = KLCategory;
-				PRODUCT_NAME = KLCategory;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D2BA8F2856B7D9DB71875E2C8AE8ADD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B1E2F3ACFA40F7181799ED73F8330E2 /* KLCategory.release.xcconfig */;
+			baseConfigurationReference = 043DBB9CD608BB21F33D7947BC4B4950 /* KLCategory.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1132,11 +1142,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A4B4FA5E4F55415631438A5EFC89F43 /* Build configuration list for PBXNativeTarget "KLCategory" */ = {
+		1F78A9C9ED062058A6F512E91795C564 /* Build configuration list for PBXNativeTarget "KLCategory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B05667F4C67525731F89DDAD26472267 /* Debug */,
-				D2BA8F2856B7D9DB71875E2C8AE8ADD1 /* Release */,
+				9E28D0D272244325F61D24DA31CDE457 /* Debug */,
+				D5C07C6A31659E8A39042B224AA7C5EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

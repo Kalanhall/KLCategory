@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -21,22 +22,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self kl_observerObject:self.tableView forKeyPath:@"contentOffset" completion:^(id value) {
-        NSLogDebug(@"%@", value);
-    }];
+
     
     self.dataSource = @[];
     
+    self.timer = [NSTimer kl_scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer *timer) {
+        NSLog(@"kl_scheduledTimerWithTimeInterval %@", NSDate.date);
+    }];
+    
     [self kl_observerNotificationName:@"name" completion:^(NSNotification *notification) {
-        NSLogDebug(@"%@", notification);
+        NSLogDebug(@"kl_observerNotificationName %@", notification);
     }];
     
     [NSNotificationCenter.defaultCenter postNotificationName:@"name" object:@"name..."];
+    
+    [self kl_observerObject:self.tableView forKeyPath:KeyPath(self.tableView, contentOffset) completion:^(id value) {
+        NSLogDebug(@"%@", value);
+    }];
 }
 
 - (void)dealloc
 {
-    
+    [self.timer invalidate];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
